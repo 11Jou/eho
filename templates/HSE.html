@@ -1,0 +1,190 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% load i18n %}
+{% block content %}
+
+<title>{% block title %}QHSE{% endblock %}</title>
+
+<!-- Page Header Start -->
+<div class="container-fluid page-header-hse py-5 mb-5">
+    <div class="container py-5">
+        <h1 class="display-3 text-white mb-3 animated slideInDown">{% trans "QHSE" %}</h1>
+        <nav aria-label="breadcrumb animated slideInDown">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a class="text-white" href="#">{% trans "Home" %}</a></li>
+                <li class="breadcrumb-item text-white active" aria-current="page">{% trans "QHSE" %}</li>
+            </ol>
+        </nav>
+    </div>
+</div>
+<!-- Page Header End -->
+
+
+{% get_current_language as current_language %}
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="row mt-n2">
+            <div class="col-12 text-center">
+                <ul class="list-inline mb-5" id="portfolio-flters">
+                    <li class="mx-2 active" data-filter=".first">{% trans "Policy" %}</li>
+                    <li class="mx-2" data-filter=".second">{% trans "Certificate" %}</li>
+                    <li class="mx-2" data-filter=".third">{% trans "Videos" %}</li>
+                    <li class="mx-2" data-filter=".forth">{% trans "Photo Gallery" %}</li>
+                </ul>
+            </div>
+        </div>
+        <div class="row g-0 mx-lg-0">
+            <div class="col-lg-12 col-md-6 data first">
+                <div class="p-lg-5 pe-lg-0">
+                    <div>
+                        <h1 class="display-5">{% trans "Health, Safety, and Environment" %}</h1>
+                    </div>
+                    <p>
+                        {% blocktrans %}
+                        HSE, which stands for Health, Safety, and Environment, 
+                        is a framework that helps organizations manage and improve their performance in these areas. 
+                        It comprises a set of practices that help organizations manage and control the quality of their products, 
+                        the health and safety of their employees, and the environmental impact of their operations.
+                        {% endblocktrans %}
+                    </p>
+
+                    {% if current_language == 'en' %}
+                    {% for key, value in policy.items %}
+                    <h3 style="color: green;">{{key.title_en}}</h3>
+                    <p>{{key.content_en}}</p>
+                    <ul>
+                        {% for i in value%}
+                        <li>
+                            {{i.content_en}}
+                        </li>
+                        {% endfor %}
+                    </ul>
+                    {% endfor %}
+                    {% else %}
+                    {% for key, value in policy.items %}
+                    <h3 style="color: green;">{{key.title_ar}}</h3>
+                    <p>{{key.content_ar}}</p>
+                    <ul>
+                        {% for i in value%}
+                        <li>
+                            {{i.content_ar}}
+                        </li>
+                        {% endfor %}
+                    </ul>
+                    {% endfor %}
+                    {% endif%}
+                </div>
+            </div>
+            <div class="col-lg-12 col-md-6 data second mx-auto">
+                {% if pdfs %}
+                <table>
+                    <thead>
+                        <tr>
+                            <th>id</th>
+                            <th>PDF File</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for pdf in pdfs%}
+                        <tr>
+                            <td>{{pdf.id}}</td>
+                            <td><a href="{{pdf.pdf.url}}" target="_blank"> {{pdf.title}}</a></td>
+                        </tr>
+                        {% endfor%}
+                    </tbody>
+                </table>
+                {% else %}
+                <h3>{% trans "No Data Available" %}</h3>
+                {% endif %}
+            </div>
+
+            <div class="col-lg-12 col-md-6 data third mx-auto">
+                {% if page_obj_videos %}
+                <div class="row g-0 mx-lg-0">
+                    <div class="gallery-video">
+                        {% for video in page_obj_videos %}
+                        <div class="gallery-item">
+                            <video width="400" controls>
+                                <source src="{{video.video.url}}" type="video/mp4">
+                                Your browser does not support HTML video.
+                            </video>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+
+
+                <div class="pagination-container">
+                    <div class="pagination">
+                        <span class="step-links">
+                            {% if page_obj_videos.has_previous %}
+                            <a href="?page=1" class="pagination-link">&laquo;</a>
+                            <a href="?page={{ page_obj_videos.previous_page_number }}">&lsaquo;</a>
+                            {% endif %}
+
+                            {% for num in page_obj_videos.paginator.page_range %}
+                            {% if page_obj_videos.number == num %}
+                            <a href="#" class="active">{{ num }}</a>
+                            {% else %}
+                            <a href="?page={{ num }}">{{ num }}</a>
+                            {% endif %}
+                            {% endfor %}
+
+                            {% if page_obj.has_next %}
+                            <a href="?page={{ page_obj_videos.next_page_number }}">&rsaquo;</a>
+                            <a href="?page={{ page_obj_videos.paginator.num_pages }}">&raquo;</a>
+                            {% endif %}
+                        </span>
+                    </div>
+                </div>
+                {% else %}
+                <h3>{% trans "No Data Available" %}</h3>
+                {% endif %}
+            </div>
+
+            <div class="col-lg-12 col-md-6 data forth mx-auto">
+                {% if page_obj_images %}
+                <div class="row g-0 mx-lg-0">
+                    <div class="gallery">
+                        {% for image in page_obj_images %}
+                        <div class="gallery-item">
+                            <img src="{{image.image.url}}" alt="Photo 1">
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+ 
+
+                <div class="pagination-container">
+                    <div class="pagination">
+                        <span class="step-links">
+                            {% if page_obj_images.has_previous %}
+                            <a href="?page=1" class="pagination-link">&laquo;</a>
+                            <a href="?page={{ page_obj_images.previous_page_number }}">&lsaquo;</a>
+                            {% endif %}
+
+                            {% for num in page_obj_images.paginator.page_range %}
+                            {% if page_obj_images.number == num %}
+                            <a href="#" class="active">{{ num }}</a>
+                            {% else %}
+                            <a href="?page={{ num }}">{{ num }}</a>
+                            {% endif %}
+                            {% endfor %}
+
+                            {% if page_obj.has_next %}
+                            <a href="?page={{ page_obj_images.next_page_number }}">&rsaquo;</a>
+                            <a href="?page={{ page_obj_images.paginator.num_pages }}">&raquo;</a>
+                            {% endif %}
+                        </span>
+                    </div>
+                </div>
+                {% else %}
+                <h3>{% trans "No Data Available" %}</h3>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,163 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% load i18n %}
+{% block content %}
+
+<title>{% block title %}About Us{% endblock %}</title>
+
+<!-- Page Header Start -->
+<div class="container-fluid page-header-about py-5 mb-5">
+    <div class="container py-5">
+        <h1 class="display-3 text-white mb-3 animated slideInDown">{% trans "About Us"%}</h1>
+        <nav aria-label="breadcrumb animated slideInDown">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a class="text-white" href="#">{% trans "Home" %}</a></li>
+                <li class="breadcrumb-item text-white active" aria-current="page">{% trans "About Us" %}</li>
+            </ol>
+        </nav>
+    </div>
+</div>
+<!-- Page Header End -->
+
+<!-- About Start -->
+<div class="container-fluid bg-light overflow-hidden my-5 px-lg-0">
+    <div class="container about px-lg-0">
+        <div class="row g-0 mx-lg-0">
+            <div class="col-lg-6 ps-lg-0" style="min-height: 200px;">
+                <div class="position-relative h-100">
+                    <img class="position-absolute img-fluid w-100 h-100" src="{% static 'img/about-us2.png' %}" style="object-fit: cover;" alt="">
+                </div>
+            </div>
+            <div class="col-lg-6 about-text py-5 wow fadeIn" data-wow-delay="0.5s">
+                <div class="p-lg-5 pe-lg-0">
+                    <div class="text-start">
+                        <h1 class="display-5 mb-4">{% trans "About El-Hamra Oil" %}</h1>
+                    </div>
+                    <p class="mb-4 pb-2">
+                        {% blocktrans %}
+                        According to the concession agreement issued on 8/8/2005 by Law No. 172 of 2005, 
+                        El Hamra Oil Company was established, which is one of the companies in the joint petroleum 
+                        sector between the Egyptian General Petroleum Corporation and the American company IPR, 
+                        where the company carries out research, exploration, development, and production activities. 
+                        in El Alamein field area. Western Sahara, Yidma. El Hamra Oil Company maintains its persistent 
+                        efforts year after year, believing in the growing importance of energy and its impact on all economic, 
+                        social, and political levels.
+                        {% endblocktrans %}
+
+                    </p>                
+                </div>
+            </div>
+        </div>
+    </div>
+</div> <br>
+
+<div class="container-fluid bg-light overflow-hidden my-5 px-lg-0">
+    <div class="container about px-lg-0">
+        <div class="row g-0 mx-lg-0">
+            <div class="col-lg-6 about-text py-5 wow fadeIn" data-wow-delay="0.5s">
+                <div class="p-lg-5 pe-lg-0">
+                    <div class="section-title text-start">
+                        <h1 class="display-5 mb-4">{% trans "Stakeholders" %}</h1>
+                    </div>
+                    <ul>
+                    <li> <a href="http://egpc.com.eg/">EGPC</a>
+                         {% trans "Is an economic State Corporation affiliated to the Ministry of Petroleum." %}
+                    </li>
+                        <li> <a href="https://www.iprenergygroup.com/">IPR</a>
+                            {% blocktrans %}
+                            Energy Group is a group of international companies in the energy sector actively engaged 
+                            in oil and gas exploration and production around the world; and providing engineering and 
+                            oilfield services worldwide. We capitalize on our technical expertise and innovation to 
+                            improve petroleum recovery, whether in our own E&P portfolio or through our global service 
+                            offerings to the market.
+                            {% endblocktrans %}
+
+                    </li>
+                </ul>
+                </div>
+            </div>
+            <div class="col-lg-6 ps-lg-0" style="min-height: 200px;">
+                <div class="position-relative h-100">
+                    <img class="position-absolute img-fluid w-100 h-100" src="{% static 'img/merged image.jpg' %}" alt="">
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div> <br>
+
+<div class="container-fluid bg-light overflow-hidden my-5 px-lg-0">
+    <div class="container about px-lg-0">
+        <div class="row g-0 mx-lg-0">
+            <div class="col-lg-6 ps-lg-0" style="min-height: 200px;">
+                <div class="position-relative h-100">
+                    <img class="position-absolute img-fluid w-100 h-100" src="{% static 'img/prespectives.jpg' %}" style="object-fit: cover;" alt="">
+                </div>
+            </div>
+            <div class="col-lg-6 about-text py-5 wow fadeIn" data-wow-delay="0.5s">
+                <div class="p-lg-5 pe-lg-0">
+                    <div class="section-title text-start">
+                        <h1 class="display-5 mb-4">{% trans "Prespectives" %}</h1>
+                    </div>
+                    <p class="mb-4 pb-2">
+                        {% blocktrans %}
+                        Explore and develop oil and gas fields in the concession Agreement of Fayum to 
+                        maximize value for Both sides and contribute to the growth of the country’s economy. 
+                        We will accomplish this by:
+                        {% endblocktrans %}
+
+                    </p>
+                    <ul>
+                        <li>
+                            {% trans "Safely and economically optimizing production and maximizing reserves whilst protecting the environment" %}
+                        </li>
+
+                        <li>
+                            {% trans "Meeting oil and gas demand for an expanding local economy" %}
+                        </li>
+
+                        <li>
+                            {% trans "Prudently investing and stewarding this national resource" %}
+                        </li>
+                        <li>
+                            {% trans "Providing employment and economic growth opportunities to the people of Egypt" %}
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> <br>
+
+<div class="container-fluid bg-light overflow-hidden my-5 px-lg-0">
+    <div class="container about px-lg-0">
+        <div class="row g-0 mx-lg-0">
+            <div class="col-lg-6 about-text py-5 wow fadeIn" data-wow-delay="0.5s">
+                <div class="p-lg-5 pe-lg-0">
+                    <div class="section-title text-start">
+                        <h1 class="display-5 mb-4">{% trans "Values" %}</h1>
+                    </div>
+                    <p class="mb-4 pb-2">
+                        {% blocktrans %}
+                        Our behavior is what defines us as a company, as employees, as people. Everything 
+                        we do is anchored by 
+                        our company values: excellence, safety, integrity, and accountability. By living our values, 
+                        and prioritizing sound business practices, we consistently achieve 
+                        high levels of performance and efficiency
+                        {% endblocktrans %}
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-6 ps-lg-0" style="min-height: 200px;">
+                <div class="position-relative h-100">
+                    <img class="position-absolute img-fluid w-100 h-100" src="{% static 'img/values.jpg' %}" alt="">
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- About End -->
+
+
+{% endblock %}

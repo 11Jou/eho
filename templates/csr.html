@@ -1,0 +1,88 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% load i18n %}
+{% block content %}
+
+<title>{% block title %}CSR{% endblock %}</title>
+
+<!-- Page Header Start -->
+<div class="container-fluid page-header-news py-5 mb-5">
+    <div class="container py-5">
+        <h1 class="display-3 text-white mb-3 animated slideInDown">{% trans "CSR" %}</h1>
+        <nav aria-label="breadcrumb animated slideInDown">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a class="text-white" href="#">{% trans "Home" %}</a></li>
+                <li class="breadcrumb-item text-white active" aria-current="page">{% trans "Media Center" %}</li>
+                <li class="breadcrumb-item text-white active" aria-current="page">{% trans "CSR" %}</li>
+            </ol>
+        </nav>
+    </div>
+</div>
+<!-- Page Header End -->
+
+
+<!-- News Start -->
+{% get_current_language as current_language %}
+<div class="container-xxl py-5">
+    <div class="container">
+        {% if page_obj %}
+        <div class="text-center">
+            <h1 class="display-5 mb-5">{% trans "Corporate social responsibility" %}</h1>
+        </div>
+        <div class="row g-4 portfolio-container">
+            {% for csr in page_obj %}
+            <div class="col-lg-4 col-md-6 portfolio-item first">
+                <div class="rounded overflow-hidden">
+                    <div class="position-relative overflow-hidden">
+                        <img class="img-fluid w-100" src="{{csr.cover.url}}" alt="">
+                        <div class="portfolio-overlay">
+                            <a class="btn btn-square btn-outline-light mx-1" href="{{csr.cover.url}}" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
+                            <a class="btn btn-square btn-outline-light mx-1" href="{% url 'details-csr' csr.id%}"><i class="fa fa-link"></i></a>
+                        </div>
+                    </div>
+                    <div class="border border-5 border-light border-top-0 p-4">
+                        <p class="text-primary fw-medium mb-2">{% trans "CSR" %}</p>
+                        {% if current_language == 'ar' %}
+                        <h5 class="lh-base mb-0">{{csr.title_ar}}</a>
+                        {% else %}
+                        <h5 class="lh-base mb-0">{{csr.title_en}}</a>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        {% else %}
+        <h3>{% trans "No Data Available" %}</h3>
+        {% endif %}
+    </div>
+</div>
+
+
+<div class="pagination-container">
+    <div class="pagination">
+        <span class="step-links">
+            {% if page_obj.has_previous %}
+                <a href="?page=1" class="pagination-link">&laquo;</a>
+                <a href="?page={{ page_obj.previous_page_number }}">&lsaquo;</a>
+                {% endif %}
+    
+                {% for num in page_obj.paginator.page_range %}
+                {% if page_obj.number == num %}
+                    <a href="#" class="active">{{ num }}</a>
+                    {% else %}
+                    <a href="?page={{ num }}">{{ num }}</a>
+                    {% endif %}
+                {% endfor %}
+    
+                {% if page_obj.has_next %}
+                <a href="?page={{ page_obj.next_page_number }}">&rsaquo;</a>
+                <a href="?page={{ page_obj.paginator.num_pages }}">&raquo;</a>
+                {% endif %}
+            </span>
+        </div>
+    </div>
+<!-- News End -->
+
+
+{% endblock %}

@@ -1,0 +1,131 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% load i18n %}
+{% block content %}
+
+
+<!-- Carousel Start -->
+
+<div class="container-fluid p-0 pb-5">
+    <div class="owl-carousel header-carousel position-relative">
+        <div class="owl-carousel-item position-relative">
+            <img class="img-fluid-header" src="{% static 'img/cover1.jpg' %}" alt="">
+            <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(53, 53, 53, .7);">
+            </div>
+        </div>
+        <div class="owl-carousel-item position-relative">
+            <img class="img-fluid-header" src="{% static 'img/cover2.jpg' %}" alt="">
+            <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(53, 53, 53, .7);">
+            </div>
+        </div>
+        <div class="owl-carousel-item position-relative">
+            <img class="img-fluid-header" src="{% static 'img/cover3.jpg' %}" alt="">
+            <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(53, 53, 53, .7);">
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Carousel End -->
+
+<!-- About Start -->
+<div class="container-fluid bg-light overflow-hidden my-5 px-lg-0">
+    <div class="container about px-lg-0">
+        <div class="row g-0 mx-lg-0">
+            <div class="col-lg-6 ps-lg-0" style="min-height: 400px;">
+                <div class="position-relative h-100">
+                    <img class="position-absolute img-fluid w-100 h-100" src="{% static 'img/about3.jpeg' %}" style="object-fit: cover;" alt="">
+                </div>
+            </div>
+            <div class="col-lg-6 about-text py-5 wow fadeIn" data-wow-delay="0.5s">
+                <div class="p-lg-5 pe-lg-0">
+                    <div class="text-start">
+                        <h1 class="display-5 mb-4">{% trans "About Us" %}</h1>
+                    </div>
+                    <p class="mb-4 pb-2">
+                        {% blocktrans %}
+                        El Hamra Oil Company was established in August 2005 to be one of the main 
+                        petroleum sector entities to run all exploratory and development activities over Alamein / Yidma oil fields , 
+                        aiming to increase the production potentiality and finding new booked reserves.
+                        {% endblocktrans %}
+                  
+                    </p>
+                    <a href="{% url 'about' %}" class="btn btn-primary py-3 px-5">{% trans "Read More"%}</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- About End -->
+
+<!-- Service Start -->
+{% get_current_language as current_language %}
+ {% if operations %}
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="text-center">
+            <h1 class="display-5 mb-5">{% trans "Operations & Services"%}</h1>
+        </div>
+        <div class="row equal-height">
+            {% for operation in operations %}
+            <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="service-item d-flex flex-column h-100">
+                    <div class="overflow-hidden">
+                        <img class="img-fluid" src="{{operation.image.url}}" alt="">
+                    </div>
+                    {% if current_language == 'en' %}
+                    <div class="p-4 text-center border border-5 border-light border-top-0 flex-grow-1">
+                        <h4 class="mb-3">{{operation.title_en}}</h4>
+                        <p>
+                            {{operation.content_en}}
+                        </p>
+                        <a class="fw-medium" href="{% url 'operation' %}">{% trans "Read More"%}<i class="fa fa-arrow-right ms-2"></i></a>
+                    </div>
+                    {% else %}
+                    <div class="p-4 text-center border border-5 border-light border-top-0 flex-grow-1">
+                        <h4 class="mb-3">{{operation.title_ar}}</h4>
+                        <p>
+                            {{operation.content_ar}}
+                        </p>
+                        <a class="fw-medium" href="{% url 'operation' %}">{% trans "Read More"%}<i class="fa fa-arrow-right ms-2"></i></a>
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endif %}
+<!-- Service End --> 
+
+
+<div class="container-fluid bg-light overflow-hidden my-5 px-lg-0">
+    <div class="container about px-lg-0">
+        <div class="row g-0 mx-lg-0">
+            <div class="col-lg-6 about-text py-5 wow fadeIn" data-wow-delay="0.5s">
+                <div class="p-lg-5 pe-lg-0">
+                    <div class="text-start">
+                        <h1 class="display-5 mb-4">{% trans "QHSE" %}</h1>
+                    </div>
+                    <p class="mb-4 pb-2">
+                        {% blocktrans %}
+                        HSE, which stands for Health, Safety, and Environment, 
+                        is a framework that helps organizations manage and improve their performance in these areas. 
+                        It comprises a set of practices that help organizations manage and control the quality of their products, 
+                        the health and safety of their employees, and the environmental impact of their operations.
+                        {% endblocktrans %}
+                  
+                    </p>
+                    <a href="{% url '_hse' %}" class="btn btn-primary py-3 px-5">{% trans "Read More"%}</a>
+                </div>
+            </div>
+            <div class="col-lg-6 ps-lg-0" style="min-height: 400px;">
+                <div class="position-relative h-100">
+                    <img class="position-absolute img-fluid w-100 h-100" src="{% static 'img/QHSE.jpg' %}" style="object-fit: cover;" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

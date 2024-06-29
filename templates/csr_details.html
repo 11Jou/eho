@@ -1,0 +1,48 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% load i18n %}
+{% block content %}
+
+<title>{% block title %}CSR Details{% endblock %}</title>
+
+
+{% get_current_language as current_language %}
+<div class="container-fluid overflow-hidden px-lg-0">
+    <div class="container">
+        <div class="row g-0 mx-lg-0">
+            <div class="col-lg-12 about-text py-5 wow fadeIn" data-wow-delay="0.5s">
+                {% if current_language == 'ar' %}
+                <div class="p-lg-5 pe-lg-0">
+                    <div>
+                        <h1 class="display-5">{{data.title_ar}}</h1>
+                    </div>
+                    <p>
+                        {{data.content_ar}}
+                    </p>
+                </div>
+                {% else %}
+                <div class="p-lg-5 pe-lg-0">
+                    <div>
+                        <h1 class="display-5">{{data.title_en}}</h1>
+                    </div>
+                    <p>
+                        {{data.content_en}}
+                    </p>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+        <div class="row g-0 mx-lg-0">
+            <div class="gallery">
+                {% for image in images %}
+                <div class="gallery-item">
+                    <img src="{{image.image.url}}" alt="Photo 1">
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}
