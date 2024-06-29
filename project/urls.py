@@ -22,6 +22,14 @@ from django.conf.urls import handler404
 from .views import success
 from django.conf.urls.i18n import i18n_patterns
 
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('', include('main_pages.urls')),
+    path('media-center/', include('media_center.urls')),
+    path('success/', success, name='_success'),
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+
 
 urlpatterns = i18n_patterns(
     path('admin/', admin.site.urls),
