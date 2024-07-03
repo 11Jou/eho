@@ -19,13 +19,6 @@ class EventAdmin(admin.ModelAdmin):
     actions = [export_as_csv]
 
 
-class CSRAdmin(admin.ModelAdmin):
-    search_fields = ("title",)
-    list_filter = ("date",)
-    actions = [export_as_csv]
-
-
-
 class CareerAdmin(admin.ModelAdmin):
     search_fields = ("name",)
     actions = [export_as_csv]
@@ -40,8 +33,6 @@ admin.site.register(New, NewsAdmin)
 admin.site.register(NewsImage)
 admin.site.register(Event, EventAdmin)
 admin.site.register(EventVideo)
-admin.site.register(CSR, CSRAdmin)
-admin.site.register(CSRImage)
 
 
 admin.site.register(Departement)

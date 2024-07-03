@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'main_pages',
     'media_center',
+    'departments',
 ]
 
 

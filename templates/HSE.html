@@ -20,37 +20,26 @@
 <!-- Page Header End -->
 
 
+<div class="row mt-n2">
+    <div class="col-12 text-center">
+        <ul class="list-inline mb-5" id="portfolio-flters">
+            <li class="mx-2 active" data-filter=".first">{% trans "Policy" %}</li>
+            <li class="mx-2" data-filter=".second">{% trans "Certificate" %}</li>
+            <li class="mx-2" data-filter=".third">{% trans "Videos" %}</li>
+            <li class="mx-2" data-filter=".forth">{% trans "Photo Gallery" %}</li>
+        </ul>
+    </div>
+</div>
+
 {% get_current_language as current_language %}
 <div class="container-xxl py-5">
     <div class="container">
-        <div class="row mt-n2">
-            <div class="col-12 text-center">
-                <ul class="list-inline mb-5" id="portfolio-flters">
-                    <li class="mx-2 active" data-filter=".first">{% trans "Policy" %}</li>
-                    <li class="mx-2" data-filter=".second">{% trans "Certificate" %}</li>
-                    <li class="mx-2" data-filter=".third">{% trans "Videos" %}</li>
-                    <li class="mx-2" data-filter=".forth">{% trans "Photo Gallery" %}</li>
-                </ul>
-            </div>
-        </div>
         <div class="row g-0 mx-lg-0">
             <div class="col-lg-12 col-md-6 data first">
                 <div class="p-lg-5 pe-lg-0">
-                    <div>
-                        <h1 class="display-5">{% trans "Health, Safety, and Environment" %}</h1>
-                    </div>
-                    <p>
-                        {% blocktrans %}
-                        HSE, which stands for Health, Safety, and Environment, 
-                        is a framework that helps organizations manage and improve their performance in these areas. 
-                        It comprises a set of practices that help organizations manage and control the quality of their products, 
-                        the health and safety of their employees, and the environmental impact of their operations.
-                        {% endblocktrans %}
-                    </p>
-
                     {% if current_language == 'en' %}
                     {% for key, value in policy.items %}
-                    <h3 style="color: green;">{{key.title_en}}</h3>
+                    <h2 style="color: green;">{{key.title_en}}</h2>
                     <p>{{key.content_en}}</p>
                     <ul>
                         {% for i in value%}
@@ -62,7 +51,7 @@
                     {% endfor %}
                     {% else %}
                     {% for key, value in policy.items %}
-                    <h3 style="color: green;">{{key.title_ar}}</h3>
+                    <h2 style="color: green;">{{key.title_ar}}</h2>
                     <p>{{key.content_ar}}</p>
                     <ul>
                         {% for i in value%}
@@ -112,6 +101,7 @@
                         {% endfor %}
                     </div>
                 </div>
+                <br>
 
 
                 <div class="pagination-container">
@@ -153,6 +143,7 @@
                         {% endfor %}
                     </div>
                 </div>
+                <br>
  
 
                 <div class="pagination-container">

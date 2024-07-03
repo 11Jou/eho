@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-06-29 14:02+0300\n"
+"POT-Creation-Date: 2024-07-02 13:38+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,68 +20,43 @@ msgstr ""
 "&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
 
 #: .\templates\HSE.html:11 .\templates\HSE.html:15
-#: .\templates\base\footer.html:25 .\templates\base\header.html:18
-#: .\templates\index.html:108
+#: .\templates\base\footer.html:25 .\templates\base\header.html:34
+#: .\templates\index.html:119
 msgid "QHSE"
 msgstr "الجودة والصحة والسلامة والبيئة"
 
-#: .\templates\HSE.html:14 .\templates\about.html:14
-#: .\templates\base\footer.html:18 .\templates\career.html:15
+#: .\templates\HSE.html:14 .\templates\about.html:14 .\templates\career.html:15
 #: .\templates\contact.html:16 .\templates\csr.html:14
-#: .\templates\events.html:14 .\templates\news.html:14
+#: .\templates\drilling.html:12 .\templates\events.html:14
+#: .\templates\exploration.html:12 .\templates\ict.html:10
+#: .\templates\management.html:10 .\templates\news.html:14
 #: .\templates\operation.html:15
 msgid "Home"
 msgstr "الرئيسية"
 
-#: .\templates\HSE.html:29
+#: .\templates\HSE.html:26
 msgid "Policy"
 msgstr "سياسة"
 
-#: .\templates\HSE.html:30
+#: .\templates\HSE.html:27
 msgid "Certificate"
 msgstr "شهادات"
 
-#: .\templates\HSE.html:31
+#: .\templates\HSE.html:28
 msgid "Videos"
 msgstr "فيديوهات"
 
-#: .\templates\HSE.html:32
+#: .\templates\HSE.html:29
 msgid "Photo Gallery"
 msgstr "معرض الصور"
 
-#: .\templates\HSE.html:40
-msgid "Health, Safety, and Environment"
-msgstr "الصحة والسلامة والبيئة"
-
-#: .\templates\HSE.html:43 .\templates\index.html:111
-msgid ""
-"\n"
-"                        HSE, which stands for Health, Safety, and "
-"Environment, \n"
-"                        is a framework that helps organizations manage and "
-"improve their performance in these areas. \n"
-"                        It comprises a set of practices that help "
-"organizations manage and control the quality of their products, \n"
-"                        the health and safety of their employees, and the "
-"environmental impact of their operations.\n"
-"                        "
-msgstr ""
-"\n"
-"                        الصحة والسلامة والبيئة، \n"
-"                        هي إطار عمل يساعد المنظمات على إدارة وتحسين أدائها "
-"في هذه المجالات. \n"
-"                        يتضمن مجموعة من الممارسات التي تساعد \n"
-"                        المنظمات على إدارة والتحكم في جودة منتجاتها، \n"
-"                        صحة وسلامة موظفيها، والأثر البيئي لعملياتها.\n"
-"                        "
-
-#: .\templates\HSE.html:97 .\templates\HSE.html:141 .\templates\HSE.html:182
+#: .\templates\HSE.html:86 .\templates\HSE.html:131 .\templates\HSE.html:173
 #: .\templates\csr.html:56 .\templates\events.html:56 .\templates\news.html:56
 msgid "No Data Available"
 msgstr "لا تتوافر بيانات"
 
 #: .\templates\about.html:11 .\templates\about.html:15
-#: .\templates\base\footer.html:19 .\templates\base\header.html:16
+#: .\templates\base\footer.html:18 .\templates\base\header.html:19
 #: .\templates\index.html:42
 msgid "About Us"
 msgstr "معلومات عنا"
@@ -238,60 +213,79 @@ msgstr "54 ش محمد صفوت الاسكندرية , مصر"
 msgid "Main Links"
 msgstr "الروابط الرئيسية"
 
-#: .\templates\base\footer.html:20 .\templates\base\header.html:28
-#: .\templates\contact.html:38
-msgid "Contact Us"
-msgstr "تواصل معنا"
-
-#: .\templates\base\footer.html:23
-msgid "Other Links"
-msgstr "روابط اخري"
-
-#: .\templates\base\footer.html:24
-msgid "Operation & Service"
-msgstr "التشغيل والخدمة"
-
-#: .\templates\base\footer.html:26 .\templates\base\header.html:23
-#: .\templates\news.html:11 .\templates\news.html:16
-msgid "News"
-msgstr "الاخبار"
-
-#: .\templates\base\footer.html:27 .\templates\base\header.html:24
-#: .\templates\events.html:11 .\templates\events.html:16
-msgid "Events"
-msgstr "الاحداث"
-
-#: .\templates\base\footer.html:28 .\templates\base\header.html:27
+#: .\templates\base\footer.html:19 .\templates\base\header.html:45
 #: .\templates\career.html:12 .\templates\career.html:16
 msgid "Career"
 msgstr "الحياة المهنية"
 
-#: .\templates\base\footer.html:36 .\templates\base\footer.html:40
+#: .\templates\base\footer.html:20 .\templates\contact.html:38
+msgid "Contact Us"
+msgstr "تواصل معنا"
+
+#: .\templates\base\footer.html:24
+msgid "Other Links"
+msgstr "روابط اخري"
+
+#: .\templates\base\footer.html:26 .\templates\base\header.html:41
+#: .\templates\news.html:11 .\templates\news.html:16
+msgid "News"
+msgstr "الاخبار"
+
+#: .\templates\base\footer.html:27 .\templates\base\header.html:42
+#: .\templates\events.html:11 .\templates\events.html:16
+msgid "Events"
+msgstr "الاحداث"
+
+#: .\templates\base\footer.html:35 .\templates\base\footer.html:39
 msgid "El Hamra Oil"
 msgstr "الحمرا اويل"
 
-#: .\templates\base\footer.html:36
+#: .\templates\base\footer.html:35
 msgid "All Right Reserved"
 msgstr "جميع الحقوق محفوظة"
 
-#: .\templates\base\footer.html:40
+#: .\templates\base\footer.html:39
 msgid " Powered By"
 msgstr "مشغل بواسطة"
 
-#: .\templates\base\header.html:17 .\templates\index.html:66
-#: .\templates\operation.html:12 .\templates\operation.html:16
-msgid "Operations & Services"
-msgstr "العمليات والخدمات"
-
-#: .\templates\base\header.html:20 .\templates\csr.html:15
-#: .\templates\events.html:15 .\templates\news.html:15
-msgid "Media Center"
-msgstr "المركز الاعلامي"
+#: .\templates\base\header.html:21
+msgid "About Company"
+msgstr "عن الشركة"
 
 #: .\templates\base\header.html:22 .\templates\csr.html:11
 #: .\templates\csr.html:16 .\templates\csr.html:44
 msgid "CSR"
 msgstr "المسؤولية الاجتماعية للشركات"
+
+#: .\templates\base\header.html:23 .\templates\management.html:7
+#: .\templates\management.html:11
+msgid "Management"
+msgstr "الإدارة"
+
+#: .\templates\base\header.html:28 .\templates\drilling.html:13
+#: .\templates\exploration.html:13 .\templates\index.html:64
+#: .\templates\operation.html:12 .\templates\operation.html:16
+msgid "Operations & Services"
+msgstr "العمليات والخدمات"
+
+#: .\templates\base\header.html:30 .\templates\exploration.html:14
+#: .\templates\index.html:73
+msgid "Exploration"
+msgstr "الاستكشافات"
+
+#: .\templates\base\header.html:31
+msgid "Operation"
+msgstr "التشغيل"
+
+#: .\templates\base\header.html:35 .\templates\ict.html:7
+#: .\templates\ict.html:11
+msgid "ICT"
+msgstr "تكنولوجيا المعلومات"
+
+#: .\templates\base\header.html:39 .\templates\csr.html:15
+#: .\templates\events.html:15 .\templates\news.html:15
+msgid "Media Center"
+msgstr "المركز الاعلامي"
 
 #: .\templates\career.html:29
 msgid "Job Application"
@@ -333,6 +327,19 @@ msgstr "ارسال رسالة"
 msgid "Corporate social responsibility"
 msgstr "المسؤولية الاجتماعية للشركات"
 
+#: .\templates\drilling.html:9 .\templates\drilling.html:14
+#: .\templates\index.html:94
+msgid "Drilling"
+msgstr "حفر"
+
+#: .\templates\drilling.html:25
+msgid "Drilling Activities"
+msgstr "أنشطة الحفر"
+
+#: .\templates\drilling.html:26
+msgid "Petroleum Engineering Activities"
+msgstr "أنشطة هندسة البترول"
+
 #: .\templates\events.html:30
 msgid "Last Events"
 msgstr "اخر الاحداث"
@@ -340,6 +347,10 @@ msgstr "اخر الاحداث"
 #: .\templates\events.html:44
 msgid "El-Hamra Oil Events"
 msgstr "احداث الحمرا اويل"
+
+#: .\templates\exploration.html:9
+msgid "Explorations"
+msgstr "الاستكشافات"
 
 #: .\templates\index.html:45
 msgid ""
@@ -362,10 +373,80 @@ msgstr ""
 "جديدة محجوزة.\n"
 "                        "
 
-#: .\templates\index.html:52 .\templates\index.html:81
-#: .\templates\index.html:89 .\templates\index.html:119
+#: .\templates\index.html:52 .\templates\index.html:83
+#: .\templates\index.html:103 .\templates\index.html:130
 msgid "Read More"
 msgstr "اقرأ المزيد"
+
+#: .\templates\index.html:75
+msgid ""
+"\n"
+"                            Throughout the fiscal year 2022/2023, geological "
+"and geophysical activities in Yidma/Alamein \n"
+"                            concession were concerned about the exploration "
+"and development in the concession. \n"
+"                            These efforts had been resulted in finalizing "
+"the 3D seismic reprocessing project for the Yidma/\n"
+"                            Alamein concession and prospects evaluation "
+"portfolio to prepare a new exploratory drilling \n"
+"                            campaign\n"
+"                            "
+msgstr ""
+"\n"
+"                            طوال السنة المالية 2022/2023، كانت الأنشطة الجيولوجية والجيوفيزيائية في امتياز يدما/العلمين \n"
+"                            تركز على الاستكشاف والتطوير في الامتياز. \n"
+"                            أسفرت هذه الجهود عن الانتهاء من مشروع إعادة معالجة البيانات الزلزالية ثلاثية الأبعاد لامتياز يدما/\n"
+"                            العلمين ومحفظة تقييم الفرص للتحضير لحملة حفر استكشافية جديدة.\n"
+"                            "
+
+
+
+msgid ""
+"\n"
+"                            HSE, which stands for Health, Safety, and "
+"Environment, \n"
+"                            is a framework that helps organizations manage "
+"and improve their performance in these areas. \n"
+"                            It comprises a set of practices that help "
+"organizations manage and control the quality of their products, \n"
+"                            the health and safety of their employees, and "
+"the environmental impact of their operations.\n"
+"                            "
+msgstr ""
+"\n"
+"                        الصحة والسلامة والبيئة، \n"
+"                        هي إطار عمل يساعد المنظمات على إدارة وتحسين أدائها "
+"في هذه المجالات. \n"
+"                        يتضمن مجموعة من الممارسات التي تساعد \n"
+"                        المنظمات على إدارة والتحكم في جودة منتجاتها، \n"
+"                        صحة وسلامة موظفيها، والأثر البيئي لعملياتها.\n"
+"                        "
+
+#: .\templates\index.html:122
+msgid ""
+"\n"
+"                        HSE, which stands for Health, Safety, and "
+"Environment, \n"
+"                        is a framework that helps organizations manage and "
+"improve their performance in these areas. \n"
+"                        It comprises a set of practices that help "
+"organizations manage and control the quality of their products, \n"
+"                        the health and safety of their employees, and the "
+"environmental impact of their operations.\n"
+"                        "
+msgstr ""
+"\n"
+"                        الصحة والسلامة والبيئة، \n"
+"                        هي إطار عمل يساعد المنظمات على إدارة وتحسين أدائها "
+"في هذه المجالات. \n"
+"                        يتضمن مجموعة من الممارسات التي تساعد \n"
+"                        المنظمات على إدارة والتحكم في جودة منتجاتها، \n"
+"                        صحة وسلامة موظفيها، والأثر البيئي لعملياتها.\n"
+"                        "
+
+#: .\templates\management.html:20
+msgid "El-Hamra Oil Chairmans"
+msgstr "رؤساء الحمرا اويل"
 
 #: .\templates\messages\404.html:13
 msgid "Page Not Found"
@@ -403,6 +484,9 @@ msgstr "اخر الاخبار"
 #: .\templates\news.html:44
 msgid "El-Hamra Oil News"
 msgstr "اخبار الحمرا اويل"
+
+#~ msgid "Health, Safety, and Environment"
+#~ msgstr "الصحة والسلامة والبيئة"
 
 #~ msgid ""
 #~ "                        Safety is a key priority across El Hamra Oil "

@@ -1,97 +1,65 @@
 from django.db import models
+from django.core.exceptions import ValidationError
+from django.core.validators import MinValueValidator, MaxValueValidator
+import datetime
 
 # Create your models here.
 
 
-class Operation(models.Model):
-    title_en = models.CharField(max_length=100)
-    content_en = models.TextField(max_length=3000)
-    title_ar = models.CharField(max_length=100)
-    content_ar = models.TextField(max_length=3000)
-    image = models.FileField(upload_to='Operation Image/%Y/%m/%d/')
-
+current_year = datetime.date.today().year
+    
+class CSR(models.Model):
+    name = models.CharField(max_length=50, unique=True)
+    title_en = models.CharField(max_length=500)
+    content_en = models.TextField(max_length=5000)
+    title_ar = models.CharField(max_length=500)
+    content_ar = models.TextField(max_length=5000)
+    cover = models.ImageField(upload_to='CSR/%Y/%m/%d/')
+    date = models.DateTimeField(auto_now_add=True)
 
     class Meta:
-        verbose_name_plural  = "Operation and Service"
+        verbose_name_plural  = "CSR"
+
 
     def __str__(self) -> str:
-        return self.title_en
+        return self.name
     
 
+class CSRImage(models.Model):
+    related_CSR = models.ForeignKey(CSR, on_delete=models.CASCADE)
+    image = models.ImageField(upload_to='CSR/%Y/%m/%d/')
 
-class QHSEMainContent(models.Model):
-    title_en = models.CharField(max_length=100,)
-    content_en = models.TextField(max_length=3000, null=True, blank=True)
-    title_ar = models.CharField(max_length=100)
-    content_ar = models.TextField(max_length=3000, null=True, blank=True)
 
     
     class Meta:
-        verbose_name_plural  = "QHSE Main Content"
-
-
-
-    def __str__(self) -> str:
-        return self.title_en
-
-
-class QHSEContent(models.Model):
-    related_title = models.ForeignKey(QHSEMainContent, on_delete=models.CASCADE)
-    content_en = models.TextField(max_length=3000)
-    content_ar = models.TextField(max_length=3000)
-
-
-    class Meta:
-        verbose_name_plural  = "QHSE Content"
+        verbose_name_plural  = "CSR Images"
 
 
     def __str__(self) -> str:
-        return str(self.related_title)
+        return str(self.related_CSR)
 
 
+class Manager(models.Model):
+    name = models.CharField(max_length=200)
+    start_year = models.IntegerField(
+        validators=[
+            MinValueValidator(2000),
+            MaxValueValidator(current_year)
+        ]
+    )
 
+    end_year = models.IntegerField(
+        validators=[
+            MinValueValidator(2000),
+            MaxValueValidator(current_year)
+        ]
+    )
+    image = models.ImageField(upload_to='managers/%Y/%m/%d/', blank=True, null=True)
 
-
-class QHSEPDF(models.Model):
-    title = models.CharField(max_length=100)
-    pdf = models.FileField(upload_to='HSE PDF/%Y/%m/%d/')
-
-
-
-    class Meta:
-        verbose_name_plural  = "QHSE PDF"
-
-
-
-    def __str__(self) -> str:
-        return self.title
-    
-
-class QHSEVideo(models.Model):
-    title = models.CharField(max_length=100)
-    video = models.FileField(upload_to='HSE Video/%Y/%m/%d/')
-
-
-    class Meta:
-        verbose_name_plural  = "QHSE Videos"
-
-
+    def clean(self) -> None:
+        super().clean()
+        if self.end_year < self.start_year:
+            raise ValidationError('End year must be greater than start year.')
 
     def __str__(self) -> str:
-        return self.title
-    
-
-    
-class QHSEImage(models.Model):
-    title = models.CharField(max_length=100)
-    image = models.FileField(upload_to='HSE Image/%Y/%m/%d/')
-
-
-    class Meta:
-        verbose_name_plural  = "QHSE Images"
-
-
-
-    def __str__(self) -> str:
-        return self.title
-
+        return self.name

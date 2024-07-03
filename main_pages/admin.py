@@ -1,42 +1,22 @@
 from django.contrib import admin
 from .models import *
+from project.export import export_as_csv
 
 
+class ManagerAdmin(admin.ModelAdmin):
+    search_fields = ("name",)
+    list_filter = ("start_year",)
+    actions = [export_as_csv]
+admin.site.register(Manager, ManagerAdmin)
 
-
-class OperationAdmin(admin.ModelAdmin):
-    search_fields = ("title_en",)
-admin.site.register(Operation, OperationAdmin)
-
-
-
-
-
-class QHSEMainContentAdmin(admin.ModelAdmin):
-    search_fields = ("title_en",)
-admin.site.register(QHSEMainContent,QHSEMainContentAdmin)
-
-
-
-class QHSEContentAdmin(admin.ModelAdmin):
-    search_fields = ("content_en",)
-admin.site.register(QHSEContent,QHSEContentAdmin)
-
-
-
-class QHSEPDFAdmin(admin.ModelAdmin):
+class CSRAdmin(admin.ModelAdmin):
     search_fields = ("title",)
-admin.site.register(QHSEPDF, QHSEPDFAdmin)
-
-class QHSEVideoAdmin(admin.ModelAdmin):
-    search_fields = ("title",)
-admin.site.register(QHSEVideo, QHSEVideoAdmin)
-
-class QHSEImageAdmin(admin.ModelAdmin):
-    search_fields = ("title",)
-admin.site.register(QHSEImage, QHSEImageAdmin)
+    list_filter = ("date",)
+    actions = [export_as_csv]
+admin.site.register(CSR, CSRAdmin)
 
 
+admin.site.register(CSRImage)
 
 
 

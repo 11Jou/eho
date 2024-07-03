@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-06-29 14:02+0300\n"
+"POT-Creation-Date: 2024-07-02 13:38+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,60 +19,43 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: .\templates\HSE.html:11 .\templates\HSE.html:15
-#: .\templates\base\footer.html:25 .\templates\base\header.html:18
-#: .\templates\index.html:108
+#: .\templates\base\footer.html:25 .\templates\base\header.html:34
+#: .\templates\index.html:119
 msgid "QHSE"
 msgstr ""
 
-#: .\templates\HSE.html:14 .\templates\about.html:14
-#: .\templates\base\footer.html:18 .\templates\career.html:15
+#: .\templates\HSE.html:14 .\templates\about.html:14 .\templates\career.html:15
 #: .\templates\contact.html:16 .\templates\csr.html:14
-#: .\templates\events.html:14 .\templates\news.html:14
+#: .\templates\drilling.html:12 .\templates\events.html:14
+#: .\templates\exploration.html:12 .\templates\ict.html:10
+#: .\templates\management.html:10 .\templates\news.html:14
 #: .\templates\operation.html:15
 msgid "Home"
 msgstr ""
 
-#: .\templates\HSE.html:29
+#: .\templates\HSE.html:26
 msgid "Policy"
 msgstr ""
 
-#: .\templates\HSE.html:30
+#: .\templates\HSE.html:27
 msgid "Certificate"
 msgstr ""
 
-#: .\templates\HSE.html:31
+#: .\templates\HSE.html:28
 msgid "Videos"
 msgstr ""
 
-#: .\templates\HSE.html:32
+#: .\templates\HSE.html:29
 msgid "Photo Gallery"
 msgstr ""
 
-#: .\templates\HSE.html:40
-msgid "Health, Safety, and Environment"
-msgstr ""
-
-#: .\templates\HSE.html:43 .\templates\index.html:111
-msgid ""
-"\n"
-"                        HSE, which stands for Health, Safety, and "
-"Environment, \n"
-"                        is a framework that helps organizations manage and "
-"improve their performance in these areas. \n"
-"                        It comprises a set of practices that help "
-"organizations manage and control the quality of their products, \n"
-"                        the health and safety of their employees, and the "
-"environmental impact of their operations.\n"
-"                        "
-msgstr ""
-
-#: .\templates\HSE.html:97 .\templates\HSE.html:141 .\templates\HSE.html:182
+#: .\templates\HSE.html:86 .\templates\HSE.html:131 .\templates\HSE.html:173
 #: .\templates\csr.html:56 .\templates\events.html:56 .\templates\news.html:56
 msgid "No Data Available"
 msgstr ""
 
 #: .\templates\about.html:11 .\templates\about.html:15
-#: .\templates\base\footer.html:19 .\templates\base\header.html:16
+#: .\templates\base\footer.html:18 .\templates\base\header.html:19
 #: .\templates\index.html:42
 msgid "About Us"
 msgstr ""
@@ -188,59 +171,78 @@ msgstr ""
 msgid "Main Links"
 msgstr ""
 
-#: .\templates\base\footer.html:20 .\templates\base\header.html:28
-#: .\templates\contact.html:38
-msgid "Contact Us"
-msgstr ""
-
-#: .\templates\base\footer.html:23
-msgid "Other Links"
-msgstr ""
-
-#: .\templates\base\footer.html:24
-msgid "Operation & Service"
-msgstr ""
-
-#: .\templates\base\footer.html:26 .\templates\base\header.html:23
-#: .\templates\news.html:11 .\templates\news.html:16
-msgid "News"
-msgstr ""
-
-#: .\templates\base\footer.html:27 .\templates\base\header.html:24
-#: .\templates\events.html:11 .\templates\events.html:16
-msgid "Events"
-msgstr ""
-
-#: .\templates\base\footer.html:28 .\templates\base\header.html:27
+#: .\templates\base\footer.html:19 .\templates\base\header.html:45
 #: .\templates\career.html:12 .\templates\career.html:16
 msgid "Career"
 msgstr ""
 
-#: .\templates\base\footer.html:36 .\templates\base\footer.html:40
+#: .\templates\base\footer.html:20 .\templates\contact.html:38
+msgid "Contact Us"
+msgstr ""
+
+#: .\templates\base\footer.html:24
+msgid "Other Links"
+msgstr ""
+
+#: .\templates\base\footer.html:26 .\templates\base\header.html:41
+#: .\templates\news.html:11 .\templates\news.html:16
+msgid "News"
+msgstr ""
+
+#: .\templates\base\footer.html:27 .\templates\base\header.html:42
+#: .\templates\events.html:11 .\templates\events.html:16
+msgid "Events"
+msgstr ""
+
+#: .\templates\base\footer.html:35 .\templates\base\footer.html:39
 msgid "El Hamra Oil"
 msgstr ""
 
-#: .\templates\base\footer.html:36
+#: .\templates\base\footer.html:35
 msgid "All Right Reserved"
 msgstr ""
 
-#: .\templates\base\footer.html:40
+#: .\templates\base\footer.html:39
 msgid " Powered By"
 msgstr ""
 
-#: .\templates\base\header.html:17 .\templates\index.html:66
-#: .\templates\operation.html:12 .\templates\operation.html:16
-msgid "Operations & Services"
-msgstr ""
-
-#: .\templates\base\header.html:20 .\templates\csr.html:15
-#: .\templates\events.html:15 .\templates\news.html:15
-msgid "Media Center"
+#: .\templates\base\header.html:21
+msgid "About Company"
 msgstr ""
 
 #: .\templates\base\header.html:22 .\templates\csr.html:11
 #: .\templates\csr.html:16 .\templates\csr.html:44
 msgid "CSR"
+msgstr ""
+
+#: .\templates\base\header.html:23 .\templates\management.html:7
+#: .\templates\management.html:11
+msgid "Management"
+msgstr ""
+
+#: .\templates\base\header.html:28 .\templates\drilling.html:13
+#: .\templates\exploration.html:13 .\templates\index.html:64
+#: .\templates\operation.html:12 .\templates\operation.html:16
+msgid "Operations & Services"
+msgstr ""
+
+#: .\templates\base\header.html:30 .\templates\exploration.html:14
+#: .\templates\index.html:73
+msgid "Exploration"
+msgstr ""
+
+#: .\templates\base\header.html:31
+msgid "Operation"
+msgstr ""
+
+#: .\templates\base\header.html:35 .\templates\ict.html:7
+#: .\templates\ict.html:11
+msgid "ICT"
+msgstr ""
+
+#: .\templates\base\header.html:39 .\templates\csr.html:15
+#: .\templates\events.html:15 .\templates\news.html:15
+msgid "Media Center"
 msgstr ""
 
 #: .\templates\career.html:29
@@ -283,12 +285,29 @@ msgstr ""
 msgid "Corporate social responsibility"
 msgstr ""
 
+#: .\templates\drilling.html:9 .\templates\drilling.html:14
+#: .\templates\index.html:94
+msgid "Drilling"
+msgstr ""
+
+#: .\templates\drilling.html:25
+msgid "Drilling Activities"
+msgstr ""
+
+#: .\templates\drilling.html:26
+msgid "Petroleum Engineering Activities"
+msgstr ""
+
 #: .\templates\events.html:30
 msgid "Last Events"
 msgstr ""
 
 #: .\templates\events.html:44
 msgid "El-Hamra Oil Events"
+msgstr ""
+
+#: .\templates\exploration.html:9
+msgid "Explorations"
 msgstr ""
 
 #: .\templates\index.html:45
@@ -303,9 +322,56 @@ msgid ""
 "                        "
 msgstr ""
 
-#: .\templates\index.html:52 .\templates\index.html:81
-#: .\templates\index.html:89 .\templates\index.html:119
+#: .\templates\index.html:52 .\templates\index.html:83
+#: .\templates\index.html:103 .\templates\index.html:130
 msgid "Read More"
+msgstr ""
+
+#: .\templates\index.html:75
+msgid ""
+"\n"
+"                            Throughout the fiscal year 2022/2023, geological "
+"and geophysical activities in Yidma/Alamein \n"
+"                            concession were concerned about the exploration "
+"and development in the concession. \n"
+"                            These efforts had been resulted in finalizing "
+"the 3D seismic reprocessing project for the Yidma/\n"
+"                            Alamein concession and prospects evaluation "
+"portfolio to prepare a new exploratory drilling \n"
+"                            campaign\n"
+"                            "
+msgstr ""
+
+#: .\templates\index.html:96
+msgid ""
+"\n"
+"                            HSE, which stands for Health, Safety, and "
+"Environment, \n"
+"                            is a framework that helps organizations manage "
+"and improve their performance in these areas. \n"
+"                            It comprises a set of practices that help "
+"organizations manage and control the quality of their products, \n"
+"                            the health and safety of their employees, and "
+"the environmental impact of their operations.\n"
+"                            "
+msgstr ""
+
+#: .\templates\index.html:122
+msgid ""
+"\n"
+"                        HSE, which stands for Health, Safety, and "
+"Environment, \n"
+"                        is a framework that helps organizations manage and "
+"improve their performance in these areas. \n"
+"                        It comprises a set of practices that help "
+"organizations manage and control the quality of their products, \n"
+"                        the health and safety of their employees, and the "
+"environmental impact of their operations.\n"
+"                        "
+msgstr ""
+
+#: .\templates\management.html:20
+msgid "El-Hamra Oil Chairmans"
 msgstr ""
 
 #: .\templates\messages\404.html:13

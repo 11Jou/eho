@@ -1,0 +1,47 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% load i18n %}
+{% block content %}
+<div class="container-fluid page-header-manage py-5 mb-5">
+    <div class="container py-5">
+        <h1 class="display-3 text-white mb-3 animated slideInDown">{% trans "Management" %}</h1>
+        <nav aria-label="breadcrumb animated slideInDown">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item text-white active" aria-current="page">{% trans "Home" %}</li>
+                <li class="breadcrumb-item text-white active" aria-current="page">{% trans "Management" %}</li>
+            </ol>
+        </nav>
+    </div>
+</div>
+
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="text-center">
+            <h1 class="display-5 mb-5">{% trans "El-Hamra Oil Chairmans" %}</h1>
+        </div>
+        <div class="row g-4">
+            {% for manager in managers %}
+            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="team-item">
+                    {% if manager.image %}
+                    <div class="overflow-hidden position-relative">
+                        <img class="img-fluid" src="{{manager.image.url}}" alt="">
+                    </div>
+                    {% else %}
+                    <div class="overflow-hidden position-relative">
+                        <img class="img-fluid" src="{% static 'img/avatar.png' %}" alt="">
+                    </div>
+                    {% endif %}
+                    <div class="text-center border border-5 border-light border-top-0 p-4">
+                        <h5 class="mb-0">{{manager.name}}</h5>
+                        <small>From {{manager.start_year}} to {{manager.end_year}}</small>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}

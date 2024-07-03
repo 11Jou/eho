@@ -58,44 +58,56 @@
 <!-- About End -->
 
 <!-- Service Start -->
-{% get_current_language as current_language %}
- {% if operations %}
 <div class="container-xxl py-5">
     <div class="container">
         <div class="text-center">
             <h1 class="display-5 mb-5">{% trans "Operations & Services"%}</h1>
         </div>
         <div class="row equal-height">
-            {% for operation in operations %}
-            <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
+            <div class="col-md-6 col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
                 <div class="service-item d-flex flex-column h-100">
                     <div class="overflow-hidden">
-                        <img class="img-fluid" src="{{operation.image.url}}" alt="">
+                        <img class="img-fluid" src="{% static 'img/oil production.jpg' %}" alt="">
                     </div>
-                    {% if current_language == 'en' %}
                     <div class="p-4 text-center border border-5 border-light border-top-0 flex-grow-1">
-                        <h4 class="mb-3">{{operation.title_en}}</h4>
+                        <h4 class="mb-3">{% trans "Exploration" %}</h4>
                         <p>
-                            {{operation.content_en}}
+                            {% blocktrans %}
+                            Throughout the fiscal year 2022/2023, geological and geophysical activities in Yidma/Alamein 
+                            concession were concerned about the exploration and development in the concession. 
+                            These efforts had been resulted in finalizing the 3D seismic reprocessing project for the Yidma/
+                            Alamein concession and prospects evaluation portfolio to prepare a new exploratory drilling 
+                            campaign
+                            {% endblocktrans %}                        
                         </p>
-                        <a class="fw-medium" href="{% url 'operation' %}">{% trans "Read More"%}<i class="fa fa-arrow-right ms-2"></i></a>
+                        <a class="fw-medium" href="{% url '_exploration' %}">{% trans "Read More"%}<i class="fa fa-arrow-right ms-2"></i></a>
                     </div>
-                    {% else %}
-                    <div class="p-4 text-center border border-5 border-light border-top-0 flex-grow-1">
-                        <h4 class="mb-3">{{operation.title_ar}}</h4>
-                        <p>
-                            {{operation.content_ar}}
-                        </p>
-                        <a class="fw-medium" href="{% url 'operation' %}">{% trans "Read More"%}<i class="fa fa-arrow-right ms-2"></i></a>
-                    </div>
-                    {% endif %}
                 </div>
             </div>
-            {% endfor %}
+
+            <div class="col-md-6 col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="service-item d-flex flex-column h-100">
+                    <div class="overflow-hidden">
+                        <img class="img-fluid" src="{% static 'img/Drilling.jpg' %}" alt="">
+                    </div>
+                    <div class="p-4 text-center border border-5 border-light border-top-0 flex-grow-1">
+                        <h4 class="mb-3">{% trans "Drilling" %}</h4>
+                        <p>
+                            {% blocktrans %}
+                            Throughout the fiscal year 2022/2023, geological and geophysical activities in Yidma/Alamein 
+                            concession were concerned about the exploration and development in the concession. 
+                            These efforts had been resulted in finalizing the 3D seismic reprocessing project for the Yidma/
+                            Alamein concession and prospects evaluation portfolio to prepare a new exploratory drilling 
+                            campaign
+                            {% endblocktrans %}                          
+                        </p>
+                        <a class="fw-medium" href="{% url '_operation' %}">{% trans "Read More"%}<i class="fa fa-arrow-right ms-2"></i></a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
-{% endif %}
 <!-- Service End --> 
 
 
