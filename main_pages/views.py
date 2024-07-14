@@ -27,39 +27,53 @@ def about_us_view(request):
     
 
 def csr_view(request):
-    all_csr = CSR.objects.all().order_by("date")
-    paginator = Paginator(all_csr, 3)
-    page_number = request.GET.get('page')
-    page_obj = paginator.get_page(page_number)
+    try:
 
-    context = {
-        "page_obj":page_obj
-    }
+        all_csr = CSR.objects.all().order_by("date")
+        paginator = Paginator(all_csr, 3)
+        page_number = request.GET.get('page')
+        page_obj = paginator.get_page(page_number)
 
-    return render(request, 'csr.html', context)
+        context = {
+            "page_obj":page_obj
+        }
+
+        return render(request, 'csr.html', context)
+    except Exception as e:
+        logger.exception(e)
+        return HttpResponseServerError
 
 
 
 
 def csr_details(request, id):
-    current_csr = CSR.objects.get(id=id)
-    csr_image = CSRImage.objects.filter(related_CSR = current_csr)
+    try:
 
-    context = {
-        "data": current_csr,
-        "images": csr_image
-    }
+        current_csr = CSR.objects.get(id=id)
+        csr_image = CSRImage.objects.filter(related_CSR = current_csr)
 
-    return render(request, 'csr_details.html', context)
+        context = {
+            "data": current_csr,
+            "images": csr_image
+        }
+
+        return render(request, 'csr_details.html', context)
+    
+    except Exception as e:
+        logger.exception(e)
+        return HttpResponseServerError
 
 
 
 
 def management_view(request):
-    all_managers = Manager.objects.all().order_by('start_year')
-    context = {
-        "managers": all_managers
-    }
-    return render(request, "management.html", context)
+    try:
 
-
+        all_managers = Manager.objects.all().order_by('start_year')
+        context = {
+            "managers": all_managers
+        }
+        return render(request, "management.html", context)
+    except Exception as e:
+        logger.exception(e)
+        return HttpResponseServerError

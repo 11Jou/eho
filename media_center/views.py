@@ -85,38 +85,48 @@ def events_details(request, id):
 
 
 def career_view(request):
-    all_dept = Departement.objects.all()
-    if request.method == "POST":
-        name = request.POST.get('name')
-        email = request.POST.get('mail')
-        phone = request.POST.get('phone')
-        dept = request.POST.get('department')
-        resume = request.FILES.get('resume')
+    try:
 
-        choosen_dept = Departement.objects.get(id=dept)
+        all_dept = Departement.objects.all()
+        if request.method == "POST":
+            name = request.POST.get('name')
+            email = request.POST.get('mail')
+            phone = request.POST.get('phone')
+            dept = request.POST.get('department')
+            resume = request.FILES.get('resume')
 
-        new_record = Career(departement = choosen_dept, name = name, email = email, phone_number = phone, resume = resume)
-        new_record.save()
+            choosen_dept = Departement.objects.get(id=dept)
 
-        return redirect('_success')
+            new_record = Career(departement = choosen_dept, name = name, email = email, phone_number = phone, resume = resume)
+            new_record.save()
 
-    context = {
-        'depts' : all_dept
-    }
-    return render(request, 'career.html', context)
+            return redirect('_success')
+
+        context = {
+            'depts' : all_dept
+        }
+        return render(request, 'career.html', context)
+    except Exception as e:
+        logger.exception(e)
+        return HttpResponseServerError
 
 
 def contact_us_view(request):
-    if request.method == "POST":
-        name = request.POST.get('name')
-        email = request.POST.get('mail')
-        message = request.POST.get('msg')
+    try:
 
-        new_msg = Contact(name = name, email = email, message = message)
-        new_msg.save()
+        if request.method == "POST":
+            name = request.POST.get('name')
+            email = request.POST.get('mail')
+            message = request.POST.get('msg')
 
-        return redirect('_success')
-    
-    return render(request, 'contact.html')
+            new_msg = Contact(name = name, email = email, message = message)
+            new_msg.save()
+
+            return redirect('_success')
+        
+        return render(request, 'contact.html')
+    except Exception as e:
+        logger.exception(e)
+        return HttpResponseServerError
 
 

@@ -42,24 +42,43 @@ def hse_view(request):
 
 
 def exploration_View(request):
-    all_exploration = Exploration.objects.all()
-    context = {
-        'explorations': all_exploration
-    }
-    return render(request, "exploration.html", context)
+    try:
+
+        all_exploration = Exploration.objects.all()
+        context = {
+            'explorations': all_exploration
+        }
+        return render(request, "exploration.html", context)
+    except Exception as e:
+        logger.exception(e)
+        return HttpResponseServerError
 
 
 def operation_View(request):
-    all_drilling = Drilling.objects.all()
-    all_drilling_petro = PetroleumEngineering.objects.all()
+    try:
 
-    context = {
-        'drilling': all_drilling,
-        'petro': all_drilling_petro
-    }
-    return render(request, "drilling.html", context)
+        all_drilling = Drilling.objects.all()
+        all_drilling_petro = PetroleumEngineering.objects.all()
+
+        context = {
+            'drilling': all_drilling,
+            'petro': all_drilling_petro
+        }
+        return render(request, "drilling.html", context)
+    except Exception as e:
+        logger.exception(e)
+        return HttpResponseServerError
 
 
 
 def ict_view(request):
-    return render(request, "ict.html")
+    try:
+
+        all_blogs = ICT.objects.all()
+        context = {
+            "blogs": all_blogs
+        }
+        return render(request, "ict.html", context)
+    except Exception as e:
+        logger.exception(e)
+        return HttpResponseServerError
