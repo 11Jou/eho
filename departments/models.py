@@ -11,7 +11,7 @@ class QHSEMainContent(models.Model):
 
     
     class Meta:
-        verbose_name_plural  = "QHSE Main Content"
+        verbose_name_plural  = "HSE Main Content"
 
 
 
@@ -26,7 +26,7 @@ class QHSEContent(models.Model):
 
 
     class Meta:
-        verbose_name_plural  = "QHSE Content"
+        verbose_name_plural  = "HSE Content"
 
 
     def __str__(self) -> str:
@@ -43,7 +43,7 @@ class QHSEPDF(models.Model):
 
 
     class Meta:
-        verbose_name_plural  = "QHSE PDF"
+        verbose_name_plural  = "HSE PDF"
 
 
 
@@ -57,7 +57,7 @@ class QHSEVideo(models.Model):
 
 
     class Meta:
-        verbose_name_plural  = "QHSE Videos"
+        verbose_name_plural  = "HSE Videos"
 
 
 
@@ -72,7 +72,7 @@ class QHSEImage(models.Model):
 
 
     class Meta:
-        verbose_name_plural  = "QHSE Images"
+        verbose_name_plural  = "HSE Images"
 
 
 

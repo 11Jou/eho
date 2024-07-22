@@ -35,8 +35,7 @@
 <div class="container-xxl py-5">
     <div class="container">
         <div class="row g-0 mx-lg-0">
-            <div class="col-lg-12 col-md-6 data first">
-                <div class="p-lg-5 pe-lg-0">
+            <div class="col-lg-12 col-md-6 data first mx-auto">
                     {% if current_language == 'en' %}
                     {% for key, value in policy.items %}
                     <h2 style="color: green;">{{key.title_en}}</h2>
@@ -62,7 +61,6 @@
                     </ul>
                     {% endfor %}
                     {% endif%}
-                </div>
             </div>
             <div class="col-lg-12 col-md-6 data second mx-auto">
                 {% if pdfs %}
