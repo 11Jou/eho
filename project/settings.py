@@ -47,7 +47,10 @@ INSTALLED_APPS = [
     'main_pages',
     'media_center',
     'departments',
+    'crispy_forms',
 ]
+
+
 
 
 MIDDLEWARE = [

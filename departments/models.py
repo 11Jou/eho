@@ -1,3 +1,4 @@
+from typing import Any
 from django.db import models
 
 # Create your models here.
@@ -138,6 +139,7 @@ class ICT(models.Model):
 
     class Meta:
         verbose_name_plural  = "ICT"
+
 
     def __str__(self) -> str:
         return self.title_en

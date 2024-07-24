@@ -2,7 +2,11 @@ from django.shortcuts import render
 from django.http import HttpResponseServerError
 from django.core.paginator import Paginator
 from .models import *
+from django.http import JsonResponse
+from django.views.decorators.csrf import csrf_exempt
+from .forms import ICTForm
 import logging
+
 
 
 
@@ -82,3 +86,4 @@ def ict_view(request):
     except Exception as e:
         logger.exception(e)
         return HttpResponseServerError
+    

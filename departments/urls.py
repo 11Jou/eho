@@ -6,4 +6,5 @@ urlpatterns = [
     path('exploration', views.exploration_View, name='_exploration'),
     path('operations', views.operation_View, name='_operation'),
     path('ict', views.ict_view, name='_ict'),
+    # path('upload/', views.upload_file, name='upload_file'),
 ]
