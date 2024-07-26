@@ -6,7 +6,7 @@ $(document).ready(function() {
         e.preventDefault();
         var formData = new FormData(this);
         var progressBar = $('<div class="progress-bar"><div class="progress"></div></div>');
-        $('body').append(progressBar);
+        fileInput.parent().append(progressBar);
 
         console.log("Start Upload")
 

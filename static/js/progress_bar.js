@@ -1,12 +1,13 @@
 $(document).ready(function() {
-    var fileInput = $('#id_image');
+    var fileInput = $('#id_video');
     var form = fileInput.closest('form');
 
     form.on('submit', function(e) {
         e.preventDefault();
         var formData = new FormData(this);
         var progressBar = $('<div class="progress-bar"><div class="progress"></div></div>');
-        $('body').append(progressBar);
+        fileInput.parent().append(progressBar);
+        console.log(progressBar);
 
         console.log("Start Upload")
 
@@ -32,7 +33,6 @@ $(document).ready(function() {
             },
             success: function(response) {
                 console.log("Uploaded file")
-                window.location.href = form.attr('action');
             },
             error: function(response) {
                 alert('An error occurred while uploading the file.');

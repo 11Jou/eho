@@ -44,8 +44,10 @@ class EventVideoAdmin(admin.ModelAdmin):
     form = EventVideoAdminForm
     class Media:
         js = ('https://code.jquery.com/jquery-3.6.0.min.js',"js/progress_bar.js")
-        
-admin.site.register(EventVideo)
+        css = {
+            "all": ('css/progress_bar.css',)
+        }
+admin.site.register(EventVideo, EventVideoAdmin)
 
 
 admin.site.register(Departement)
