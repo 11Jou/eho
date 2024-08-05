@@ -17,9 +17,9 @@ def hse_view(request):
     try:
         pdfs = QHSEPDF.objects.all()
         images = QHSEImage.objects.all()
-        paginator_images = Paginator(images, 12)
+        paginator_images = Paginator(images, 30)
         videos = QHSEVideo.objects.all()
-        paginator_videos = Paginator(videos, 12)
+        paginator_videos = Paginator(videos, 30)
         page_number = request.GET.get('page')
         page_obj_images = paginator_images.get_page(page_number)
         page_obj_videos = paginator_videos.get_page(page_number)
@@ -62,16 +62,29 @@ def operation_View(request):
     try:
 
         all_drilling = Drilling.objects.all()
-        all_drilling_petro = PetroleumEngineering.objects.all()
 
         context = {
             'drilling': all_drilling,
-            'petro': all_drilling_petro
         }
         return render(request, "drilling.html", context)
     except Exception as e:
         logger.exception(e)
         return HttpResponseServerError
+    
+
+
+
+def operation_petro_view(request):
+    try:
+        all_drilling_petro = PetroleumEngineering.objects.all()
+        context = {
+            'petro': all_drilling_petro
+        }
+        return render(request, "petro.html", context)
+    except Exception as e:
+        logger.exception(e)
+        return HttpResponseServerError
+
 
 
 

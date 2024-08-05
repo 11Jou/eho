@@ -3,21 +3,19 @@
 {% load i18n %}
 {% block content %}
 
-
 <div class="container-fluid page-header-operation py-5 mb-5">
     <div class="container py-5">
-        <h1 class="display-3 text-white mb-3 animated slideInDown">{% trans "Drilling" %}</h1>
+        <h1 class="display-3 text-white mb-3 animated slideInDown">{% trans "Petroleum Engineering" %}</h1>
         <nav aria-label="breadcrumb animated slideInDown">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item text-white active" aria-current="page">{% trans "Home" %}</li>
                 <li class="breadcrumb-item text-white active" aria-current="page">{% trans "Operations & Services" %}</li>
                 <li class="breadcrumb-item text-white active" aria-current="page">{% trans "Operation" %}</li>
-                <li class="breadcrumb-item text-white active" aria-current="page">{% trans "Drilling Activities" %}</li>
+                <li class="breadcrumb-item text-white active" aria-current="page">{% trans "Petroleum Engineering Activities" %}</li>
             </ol>
         </nav>
     </div>
 </div>
-
 
 <div class="row mt-n2">
     <div class="col-12 text-center">
@@ -29,9 +27,8 @@
 </div>
 
 
-
-{% for obj in drilling %}
-<div class="container-fluid bg-light overflow-hidden my-5 px-lg-0 data first">
+{% for obj in petro %}
+<div class="container-fluid bg-light overflow-hidden my-5 px-lg-0 data second">
     <div class="container about px-lg-0">
         <div class="row g-0 mx-lg-0">
             {% get_current_language as current_language %}
@@ -108,11 +105,5 @@
     </div>
 </div>  
 {% endfor %}
-
-
-
-
-
-
 
 {% endblock %}
