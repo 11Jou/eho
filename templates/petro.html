@@ -26,7 +26,7 @@
     </div>
 </div>
 
-
+{% if petro %}
 {% for obj in petro %}
 <div class="container-fluid bg-light overflow-hidden my-5 px-lg-0 data second">
     <div class="container about px-lg-0">
@@ -103,7 +103,11 @@
             {% endif %}
         </div>
     </div>
-</div>  
+</div>
 {% endfor %}
-
+{% else %}
+<div class="container">
+    <h3>{% trans "No Data Available" %}</h3>
+</div>
+{% endif %}
 {% endblock %}

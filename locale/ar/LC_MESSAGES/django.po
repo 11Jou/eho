@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-02 13:38+0300\n"
+"POT-Creation-Date: 2024-08-07 09:34+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,45 +19,47 @@ msgstr ""
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
 
-#: .\templates\HSE.html:11 .\templates\HSE.html:15
-#: .\templates\base\footer.html:25 .\templates\base\header.html:34
-#: .\templates\index.html:119
+#: .\templates\HSE.html:12 .\templates\HSE.html:16
+#: .\templates\base\footer.html:27 .\templates\base\header.html:34
+#: .\templates\index.html:120
 msgid "QHSE"
 msgstr "الجودة والصحة والسلامة والبيئة"
 
-#: .\templates\HSE.html:14 .\templates\about.html:14 .\templates\career.html:15
+#: .\templates\HSE.html:15 .\templates\about.html:14 .\templates\career.html:15
 #: .\templates\contact.html:16 .\templates\csr.html:14
 #: .\templates\drilling.html:12 .\templates\events.html:14
 #: .\templates\exploration.html:12 .\templates\ict.html:10
 #: .\templates\management.html:10 .\templates\news.html:14
-#: .\templates\operation.html:15
+#: .\templates\operation.html:15 .\templates\petro.html:11
 msgid "Home"
 msgstr "الرئيسية"
 
-#: .\templates\HSE.html:26
+#: .\templates\HSE.html:27
 msgid "Policy"
 msgstr "سياسة"
 
-#: .\templates\HSE.html:27
+#: .\templates\HSE.html:28
 msgid "Certificate"
 msgstr "شهادات"
 
-#: .\templates\HSE.html:28
+#: .\templates\HSE.html:29
 msgid "Videos"
 msgstr "فيديوهات"
 
-#: .\templates\HSE.html:29
+#: .\templates\HSE.html:30
 msgid "Photo Gallery"
 msgstr "معرض الصور"
 
-#: .\templates\HSE.html:86 .\templates\HSE.html:131 .\templates\HSE.html:173
-#: .\templates\csr.html:56 .\templates\events.html:56 .\templates\news.html:56
+#: .\templates\HSE.html:85 .\templates\HSE.html:130 .\templates\HSE.html:172
+#: .\templates\csr.html:56 .\templates\drilling.html:113
+#: .\templates\events.html:56 .\templates\exploration.html:103
+#: .\templates\news.html:56 .\templates\petro.html:110
 msgid "No Data Available"
 msgstr "لا تتوافر بيانات"
 
 #: .\templates\about.html:11 .\templates\about.html:15
-#: .\templates\base\footer.html:18 .\templates\base\header.html:19
-#: .\templates\index.html:42
+#: .\templates\base\footer.html:20 .\templates\base\header.html:19
+#: .\templates\csr.html:15 .\templates\index.html:42
 msgid "About Us"
 msgstr "معلومات عنا"
 
@@ -201,50 +203,66 @@ msgstr ""
 "                        باستمرار مستويات عالية من الأداء والكفاءة\n"
 "                        "
 
-#: .\templates\base\footer.html:8
+#: .\templates\base\base.html:46
+msgid ""
+"\n"
+"                Our Website is Under reviewing and updating, \n"
+"                You can visit us soon after reviewing the website data\n"
+"                "
+msgstr ""
+"\n"
+"                موقعنا تحت المراجعة والتحديث، \n"
+"                يمكنك زيارتنا قريباً بعد مراجعة بيانات الموقع\n"
+"                "
+
+#: .\templates\base\base.html:52
+msgid "OK"
+msgstr "حسنا"
+
+#: .\templates\base\footer.html:9
 msgid "Address"
 msgstr "العنوان"
 
-#: .\templates\base\footer.html:9
+#: .\templates\base\footer.html:10
 msgid "54 Mohamed Safwat, Alexandria, Egypt"
 msgstr "54 ش محمد صفوت الاسكندرية , مصر"
 
-#: .\templates\base\footer.html:17
+#: .\templates\base\footer.html:19
 msgid "Main Links"
 msgstr "الروابط الرئيسية"
 
-#: .\templates\base\footer.html:19 .\templates\base\header.html:45
+#: .\templates\base\footer.html:21 .\templates\base\header.html:45
 #: .\templates\career.html:12 .\templates\career.html:16
 msgid "Career"
 msgstr "الحياة المهنية"
 
-#: .\templates\base\footer.html:20 .\templates\contact.html:38
+#: .\templates\base\footer.html:22 .\templates\contact.html:38
 msgid "Contact Us"
 msgstr "تواصل معنا"
 
-#: .\templates\base\footer.html:24
+#: .\templates\base\footer.html:26
 msgid "Other Links"
 msgstr "روابط اخري"
 
-#: .\templates\base\footer.html:26 .\templates\base\header.html:41
+#: .\templates\base\footer.html:28 .\templates\base\header.html:41
 #: .\templates\news.html:11 .\templates\news.html:16
 msgid "News"
 msgstr "الاخبار"
 
-#: .\templates\base\footer.html:27 .\templates\base\header.html:42
+#: .\templates\base\footer.html:29 .\templates\base\header.html:42
 #: .\templates\events.html:11 .\templates\events.html:16
 msgid "Events"
 msgstr "الاحداث"
 
-#: .\templates\base\footer.html:35 .\templates\base\footer.html:39
+#: .\templates\base\footer.html:37 .\templates\base\footer.html:41
 msgid "El Hamra Oil"
 msgstr "الحمرا اويل"
 
-#: .\templates\base\footer.html:35
+#: .\templates\base\footer.html:37
 msgid "All Right Reserved"
 msgstr "جميع الحقوق محفوظة"
 
-#: .\templates\base\footer.html:39
+#: .\templates\base\footer.html:41
 msgid " Powered By"
 msgstr "مشغل بواسطة"
 
@@ -265,6 +283,7 @@ msgstr "الإدارة"
 #: .\templates\base\header.html:28 .\templates\drilling.html:13
 #: .\templates\exploration.html:13 .\templates\index.html:64
 #: .\templates\operation.html:12 .\templates\operation.html:16
+#: .\templates\petro.html:12
 msgid "Operations & Services"
 msgstr "العمليات والخدمات"
 
@@ -273,7 +292,8 @@ msgstr "العمليات والخدمات"
 msgid "Exploration"
 msgstr "الاستكشافات"
 
-#: .\templates\base\header.html:31
+#: .\templates\base\header.html:31 .\templates\drilling.html:14
+#: .\templates\petro.html:13
 msgid "Operation"
 msgstr "التشغيل"
 
@@ -282,8 +302,8 @@ msgstr "التشغيل"
 msgid "ICT"
 msgstr "تكنولوجيا المعلومات"
 
-#: .\templates\base\header.html:39 .\templates\csr.html:15
-#: .\templates\events.html:15 .\templates\news.html:15
+#: .\templates\base\header.html:39 .\templates\events.html:15
+#: .\templates\news.html:15
 msgid "Media Center"
 msgstr "المركز الاعلامي"
 
@@ -327,16 +347,17 @@ msgstr "ارسال رسالة"
 msgid "Corporate social responsibility"
 msgstr "المسؤولية الاجتماعية للشركات"
 
-#: .\templates\drilling.html:9 .\templates\drilling.html:14
-#: .\templates\index.html:94
+#: .\templates\drilling.html:9 .\templates\index.html:94
 msgid "Drilling"
 msgstr "حفر"
 
-#: .\templates\drilling.html:25
+#: .\templates\drilling.html:15 .\templates\drilling.html:25
+#: .\templates\petro.html:23
 msgid "Drilling Activities"
 msgstr "أنشطة الحفر"
 
-#: .\templates\drilling.html:26
+#: .\templates\drilling.html:26 .\templates\petro.html:14
+#: .\templates\petro.html:24
 msgid "Petroleum Engineering Activities"
 msgstr "أنشطة هندسة البترول"
 
@@ -374,11 +395,11 @@ msgstr ""
 "                        "
 
 #: .\templates\index.html:52 .\templates\index.html:83
-#: .\templates\index.html:103 .\templates\index.html:130
+#: .\templates\index.html:104 .\templates\index.html:131
 msgid "Read More"
 msgstr "اقرأ المزيد"
 
-#: .\templates\index.html:75
+#: .\templates\index.html:75 .\templates\index.html:96
 msgid ""
 "\n"
 "                            Throughout the fiscal year 2022/2023, geological "
@@ -393,36 +414,16 @@ msgid ""
 "                            "
 msgstr ""
 "\n"
-"                            طوال السنة المالية 2022/2023، كانت الأنشطة الجيولوجية والجيوفيزيائية في امتياز يدما/العلمين \n"
+"                            طوال السنة المالية 2022/2023، كانت الأنشطة "
+"الجيولوجية والجيوفيزيائية في امتياز يدما/العلمين \n"
 "                            تركز على الاستكشاف والتطوير في الامتياز. \n"
-"                            أسفرت هذه الجهود عن الانتهاء من مشروع إعادة معالجة البيانات الزلزالية ثلاثية الأبعاد لامتياز يدما/\n"
-"                            العلمين ومحفظة تقييم الفرص للتحضير لحملة حفر استكشافية جديدة.\n"
+"                            أسفرت هذه الجهود عن الانتهاء من مشروع إعادة "
+"معالجة البيانات الزلزالية ثلاثية الأبعاد لامتياز يدما/\n"
+"                            العلمين ومحفظة تقييم الفرص للتحضير لحملة حفر "
+"استكشافية جديدة.\n"
 "                            "
 
-
-
-msgid ""
-"\n"
-"                            HSE, which stands for Health, Safety, and "
-"Environment, \n"
-"                            is a framework that helps organizations manage "
-"and improve their performance in these areas. \n"
-"                            It comprises a set of practices that help "
-"organizations manage and control the quality of their products, \n"
-"                            the health and safety of their employees, and "
-"the environmental impact of their operations.\n"
-"                            "
-msgstr ""
-"\n"
-"                        الصحة والسلامة والبيئة، \n"
-"                        هي إطار عمل يساعد المنظمات على إدارة وتحسين أدائها "
-"في هذه المجالات. \n"
-"                        يتضمن مجموعة من الممارسات التي تساعد \n"
-"                        المنظمات على إدارة والتحكم في جودة منتجاتها، \n"
-"                        صحة وسلامة موظفيها، والأثر البيئي لعملياتها.\n"
-"                        "
-
-#: .\templates\index.html:122
+#: .\templates\index.html:123
 msgid ""
 "\n"
 "                        HSE, which stands for Health, Safety, and "
@@ -485,26 +486,7 @@ msgstr "اخر الاخبار"
 msgid "El-Hamra Oil News"
 msgstr "اخبار الحمرا اويل"
 
-#~ msgid "Health, Safety, and Environment"
-#~ msgstr "الصحة والسلامة والبيئة"
+#: .\templates\petro.html:8
 
-#~ msgid ""
-#~ "                        Safety is a key priority across El Hamra Oil "
-#~ "Company. \n"
-#~ "                        EHO pays close attention to matters of health, "
-#~ "safety and environment protection \n"
-#~ "                        at the top management level and is committed to "
-#~ "providing safe operation and workspaces, \n"
-#~ "                        protects the health and safety of its employees "
-#~ "as well as to mitigating its \n"
-#~ "                        environmental impact.\n"
-#~ "                        "
-#~ msgstr ""
-#~ "                        السلامة هي أولوية رئيسية عبر شركة الحمرا اويل. \n"
-#~ "                        تولي شركة الحمرا اهتمامًا كبيرًا بقضايا الصحة، "
-#~ "السلامة وحماية البيئة \n"
-#~ "                        على مستوى الإدارة العليا وتلتزم بتوفير عمليات "
-#~ "آمنة ومساحات عمل آمنة، \n"
-#~ "                        تحمي صحة وسلامة موظفيها بالإضافة إلى التخفيف من "
-#~ "تأثيرها البيئي.\n"
-#~ "                        "
+msgid "Petroleum Engineering"
+msgstr "هندسة البترول"

@@ -1,4 +1,5 @@
 {% load static %}
+{% load i18n %}
 <!-- templates/base.html -->
 <!DOCTYPE html>
 <html {% if request.LANGUAGE_CODE == 'ar' %}lang="ar"{% else %}lang="en"{% endif %}>
@@ -39,16 +40,19 @@
 </head>
 
 <body>
-
     <div id="popup" class="popup">
         <div class="popup-content">
-            <strong>Our Website is Under reviewing and updating, 
-                You can visit us soon after reviewing the website data</strong><br><br>
-            <button id="ok-btn" class="ok-btn">OK</button>
+            <strong>
+                {% blocktrans %}
+                Our Website is Under reviewing and updating, 
+                You can visit us soon after reviewing the website data
+                {% endblocktrans %}
+            </strong>
+                <br><br>
+            <button id="ok-btn" class="ok-btn">{% trans "OK" %}</button>
         </div>
     </div>
     {% include 'base/header.html' %}
-
 
 
     {% block content %}
@@ -69,7 +73,6 @@
 
     <!-- Template Javascript -->
     <script src="{% static 'js/main.js' %}"></script>
-    <script src="{% static 'js/filter.js' %}"></script>
     <script src="{% static 'js/pop_up.js' %}"></script>
 
 </body>

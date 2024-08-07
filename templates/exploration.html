@@ -17,13 +17,13 @@
     </div>
 </div>
 
+
+{% if operations %}
 {% for operation in operations %}
 <div class="container-fluid bg-light overflow-hidden my-5 px-lg-0">
     <div class="container about px-lg-0">
         <div class="row g-0 mx-lg-0">
-
             {% get_current_language as current_language %}
-
             {% if forloop.counter|divisibleby:2 %}
                 {% if current_language == 'ar' %}
                     <div class="col-lg-6 about-text py-5 wow fadeIn" data-wow-delay="0.5s">
@@ -98,9 +98,10 @@
     </div>
 </div> <br>
 {% endfor %}
-
-
-
-
+{% else %}
+<div class="container">
+    <h3>{% trans "No Data Available" %}</h3>
+</div>
+{% endif %}
 
 {% endblock %}

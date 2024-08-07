@@ -90,7 +90,6 @@ def operation_petro_view(request):
 
 def ict_view(request):
     try:
-
         all_blogs = ICT.objects.all()
         context = {
             "blogs": all_blogs

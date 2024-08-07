@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-02 13:38+0300\n"
+"POT-Creation-Date: 2024-08-07 09:34+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,45 +18,47 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: .\templates\HSE.html:11 .\templates\HSE.html:15
-#: .\templates\base\footer.html:25 .\templates\base\header.html:34
-#: .\templates\index.html:119
+#: .\templates\HSE.html:12 .\templates\HSE.html:16
+#: .\templates\base\footer.html:27 .\templates\base\header.html:34
+#: .\templates\index.html:120
 msgid "QHSE"
 msgstr ""
 
-#: .\templates\HSE.html:14 .\templates\about.html:14 .\templates\career.html:15
+#: .\templates\HSE.html:15 .\templates\about.html:14 .\templates\career.html:15
 #: .\templates\contact.html:16 .\templates\csr.html:14
 #: .\templates\drilling.html:12 .\templates\events.html:14
 #: .\templates\exploration.html:12 .\templates\ict.html:10
 #: .\templates\management.html:10 .\templates\news.html:14
-#: .\templates\operation.html:15
+#: .\templates\operation.html:15 .\templates\petro.html:11
 msgid "Home"
 msgstr ""
 
-#: .\templates\HSE.html:26
+#: .\templates\HSE.html:27
 msgid "Policy"
 msgstr ""
 
-#: .\templates\HSE.html:27
+#: .\templates\HSE.html:28
 msgid "Certificate"
 msgstr ""
 
-#: .\templates\HSE.html:28
+#: .\templates\HSE.html:29
 msgid "Videos"
 msgstr ""
 
-#: .\templates\HSE.html:29
+#: .\templates\HSE.html:30
 msgid "Photo Gallery"
 msgstr ""
 
-#: .\templates\HSE.html:86 .\templates\HSE.html:131 .\templates\HSE.html:173
-#: .\templates\csr.html:56 .\templates\events.html:56 .\templates\news.html:56
+#: .\templates\HSE.html:85 .\templates\HSE.html:130 .\templates\HSE.html:172
+#: .\templates\csr.html:56 .\templates\drilling.html:113
+#: .\templates\events.html:56 .\templates\exploration.html:103
+#: .\templates\news.html:56 .\templates\petro.html:110
 msgid "No Data Available"
 msgstr ""
 
 #: .\templates\about.html:11 .\templates\about.html:15
-#: .\templates\base\footer.html:18 .\templates\base\header.html:19
-#: .\templates\index.html:42
+#: .\templates\base\footer.html:20 .\templates\base\header.html:19
+#: .\templates\csr.html:15 .\templates\index.html:42
 msgid "About Us"
 msgstr ""
 
@@ -159,50 +161,62 @@ msgid ""
 "                        "
 msgstr ""
 
-#: .\templates\base\footer.html:8
-msgid "Address"
+#: .\templates\base\base.html:46
+msgid ""
+"\n"
+"                Our Website is Under reviewing and updating, \n"
+"                You can visit us soon after reviewing the website data\n"
+"                "
+msgstr ""
+
+#: .\templates\base\base.html:52
+msgid "OK"
 msgstr ""
 
 #: .\templates\base\footer.html:9
+msgid "Address"
+msgstr ""
+
+#: .\templates\base\footer.html:10
 msgid "54 Mohamed Safwat, Alexandria, Egypt"
 msgstr ""
 
-#: .\templates\base\footer.html:17
+#: .\templates\base\footer.html:19
 msgid "Main Links"
 msgstr ""
 
-#: .\templates\base\footer.html:19 .\templates\base\header.html:45
+#: .\templates\base\footer.html:21 .\templates\base\header.html:45
 #: .\templates\career.html:12 .\templates\career.html:16
 msgid "Career"
 msgstr ""
 
-#: .\templates\base\footer.html:20 .\templates\contact.html:38
+#: .\templates\base\footer.html:22 .\templates\contact.html:38
 msgid "Contact Us"
 msgstr ""
 
-#: .\templates\base\footer.html:24
+#: .\templates\base\footer.html:26
 msgid "Other Links"
 msgstr ""
 
-#: .\templates\base\footer.html:26 .\templates\base\header.html:41
+#: .\templates\base\footer.html:28 .\templates\base\header.html:41
 #: .\templates\news.html:11 .\templates\news.html:16
 msgid "News"
 msgstr ""
 
-#: .\templates\base\footer.html:27 .\templates\base\header.html:42
+#: .\templates\base\footer.html:29 .\templates\base\header.html:42
 #: .\templates\events.html:11 .\templates\events.html:16
 msgid "Events"
 msgstr ""
 
-#: .\templates\base\footer.html:35 .\templates\base\footer.html:39
+#: .\templates\base\footer.html:37 .\templates\base\footer.html:41
 msgid "El Hamra Oil"
 msgstr ""
 
-#: .\templates\base\footer.html:35
+#: .\templates\base\footer.html:37
 msgid "All Right Reserved"
 msgstr ""
 
-#: .\templates\base\footer.html:39
+#: .\templates\base\footer.html:41
 msgid " Powered By"
 msgstr ""
 
@@ -223,6 +237,7 @@ msgstr ""
 #: .\templates\base\header.html:28 .\templates\drilling.html:13
 #: .\templates\exploration.html:13 .\templates\index.html:64
 #: .\templates\operation.html:12 .\templates\operation.html:16
+#: .\templates\petro.html:12
 msgid "Operations & Services"
 msgstr ""
 
@@ -231,7 +246,8 @@ msgstr ""
 msgid "Exploration"
 msgstr ""
 
-#: .\templates\base\header.html:31
+#: .\templates\base\header.html:31 .\templates\drilling.html:14
+#: .\templates\petro.html:13
 msgid "Operation"
 msgstr ""
 
@@ -240,8 +256,8 @@ msgstr ""
 msgid "ICT"
 msgstr ""
 
-#: .\templates\base\header.html:39 .\templates\csr.html:15
-#: .\templates\events.html:15 .\templates\news.html:15
+#: .\templates\base\header.html:39 .\templates\events.html:15
+#: .\templates\news.html:15
 msgid "Media Center"
 msgstr ""
 
@@ -285,16 +301,17 @@ msgstr ""
 msgid "Corporate social responsibility"
 msgstr ""
 
-#: .\templates\drilling.html:9 .\templates\drilling.html:14
-#: .\templates\index.html:94
+#: .\templates\drilling.html:9 .\templates\index.html:94
 msgid "Drilling"
 msgstr ""
 
-#: .\templates\drilling.html:25
+#: .\templates\drilling.html:15 .\templates\drilling.html:25
+#: .\templates\petro.html:23
 msgid "Drilling Activities"
 msgstr ""
 
-#: .\templates\drilling.html:26
+#: .\templates\drilling.html:26 .\templates\petro.html:14
+#: .\templates\petro.html:24
 msgid "Petroleum Engineering Activities"
 msgstr ""
 
@@ -323,11 +340,11 @@ msgid ""
 msgstr ""
 
 #: .\templates\index.html:52 .\templates\index.html:83
-#: .\templates\index.html:103 .\templates\index.html:130
+#: .\templates\index.html:104 .\templates\index.html:131
 msgid "Read More"
 msgstr ""
 
-#: .\templates\index.html:75
+#: .\templates\index.html:75 .\templates\index.html:96
 msgid ""
 "\n"
 "                            Throughout the fiscal year 2022/2023, geological "
@@ -342,21 +359,7 @@ msgid ""
 "                            "
 msgstr ""
 
-#: .\templates\index.html:96
-msgid ""
-"\n"
-"                            HSE, which stands for Health, Safety, and "
-"Environment, \n"
-"                            is a framework that helps organizations manage "
-"and improve their performance in these areas. \n"
-"                            It comprises a set of practices that help "
-"organizations manage and control the quality of their products, \n"
-"                            the health and safety of their employees, and "
-"the environmental impact of their operations.\n"
-"                            "
-msgstr ""
-
-#: .\templates\index.html:122
+#: .\templates\index.html:123
 msgid ""
 "\n"
 "                        HSE, which stands for Health, Safety, and "
@@ -407,4 +410,8 @@ msgstr ""
 
 #: .\templates\news.html:44
 msgid "El-Hamra Oil News"
+msgstr ""
+
+#: .\templates\petro.html:8
+msgid "Petroleum Engineering"
 msgstr ""

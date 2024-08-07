@@ -29,7 +29,7 @@
 </div>
 
 
-
+{% if drilling %}
 {% for obj in drilling %}
 <div class="container-fluid bg-light overflow-hidden my-5 px-lg-0 data first">
     <div class="container about px-lg-0">
@@ -108,11 +108,10 @@
     </div>
 </div>  
 {% endfor %}
-
-
-
-
-
-
+{% else %}
+<div class="container">
+    <h3>{% trans "No Data Available" %}</h3>
+</div>
+{% endif %}
 
 {% endblock %}
