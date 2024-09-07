@@ -19,20 +19,24 @@
 </div>
 
 
-<div class="row mt-n2">
-    <div class="col-12 text-center">
-        <ul class="list-inline mb-5" id="portfolio-flters">
-            <li class="mx-2"><a href="{% url '_operation' %}">{% trans "Drilling Activities" %}</a></li>
-            <li class="mx-2"><a href="{% url '_operation2' %}">{% trans "Petroleum Engineering Activities" %}</a></li>
-        </ul>
-    </div>
-</div>
 
 
+
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="row mt-n2">
+            <div class="col-12 text-center">
+                <ul class="list-inline mb-5" id="portfolio-flters">
+                    <li class="mx-2 active"><a href="{% url '_operation' %}">{% trans "Drilling Activities" %}</a></li>
+                    <li class="mx-2"><a href="{% url '_operation2' %}">{% trans "Petroleum Engineering Activities" %}</a></li>
+                </ul>
+            </div>
+        </div>
 {% if drilling %}
 {% for obj in drilling %}
 <div class="container-fluid bg-light overflow-hidden my-5 px-lg-0 data first">
     <div class="container about px-lg-0">
+
         <div class="row g-0 mx-lg-0">
             {% get_current_language as current_language %}
             {% if forloop.counter|divisibleby:2 %}
@@ -106,9 +110,11 @@
             {% endif %}
         </div>
     </div>
-</div>  
+</div> 
 {% endfor %}
 {% else %}
+    </div>
+</div>
 <div class="container">
     <h3>{% trans "No Data Available" %}</h3>
 </div>
