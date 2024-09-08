@@ -1,4 +1,39 @@
-<div class="col-lg-12 col-md-6 data third mx-auto">
+{% extends 'base/base.html' %}
+{% load static %}
+{% load i18n %}
+{% block content %}
+
+<title>{% block title %}QHSE{% endblock %}</title>
+
+<!-- Page Header Start -->
+<div class="container-fluid page-header-hse py-5 mb-5">
+    <div class="container py-5">
+        <h1 class="display-3 text-white mb-3 animated slideInDown">{% trans "Video" %}</h1>
+        <nav aria-label="breadcrumb animated slideInDown">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a class="text-white" href="#">{% trans "Home" %}</a></li>
+                <li class="breadcrumb-item text-white active" aria-current="page">{% trans "QHSE" %}</li>
+            </ol>
+        </nav>
+    </div>
+</div>
+<!-- Page Header End -->
+{% get_current_language as current_language %}
+<div class="container-xxl">
+    <div class="container">
+        <div class="row mt-n2">
+            <div class="col-12 text-center">
+                <ul class="list-inline mb-5" id="portfolio-flters">
+                    <li class="mx-2"><a href="{% url '_hse' %}">{% trans "Policy" %}</a></li>
+                    <li class="mx-2"><a href="{% url 'hse_pdf' %}">{% trans "Certificate" %}</a></li>
+                    <li class="mx-2 active"><a href="{% url 'hse_video' %}">{% trans "Videos" %}</a></li>
+                    <li class="mx-2"><a href="{% url 'hse_gallery' %}">{% trans "Photo Gallery" %}</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="col-lg-8 col-md-6 data third mx-auto">
     {% if page_obj_videos %}
     <div class="row g-0 mx-lg-0">
         <div class="gallery-video">
@@ -13,8 +48,6 @@
         </div>
     </div>
     <br>
-
-
     <div class="pagination-container">
         <div class="pagination">
             <span class="step-links">
@@ -42,3 +75,5 @@
     <h3>{% trans "No Data Available" %}</h3>
     {% endif %}
 </div>
+
+{% endblock %}

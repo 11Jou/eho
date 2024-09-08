@@ -4,12 +4,10 @@
 {% block content %}
 
 <title>{% block title %}QHSE{% endblock %}</title>
-<script src="{% static 'js/filter.js' %}"></script>
-
 <!-- Page Header Start -->
 <div class="container-fluid page-header-hse py-5 mb-5">
     <div class="container py-5">
-        <h1 class="display-3 text-white mb-3 animated slideInDown">{% trans "QHSE" %}</h1>
+        <h1 class="display-3 text-white mb-3 animated slideInDown">{% trans "Policy" %}</h1>
         <nav aria-label="breadcrumb animated slideInDown">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a class="text-white" href="#">{% trans "Home" %}</a></li>
@@ -21,51 +19,49 @@
 <!-- Page Header End -->
 
 
-
-{% get_current_language as current_language %}
-<div class="container-xxl py-5">
+<div class="container-xxl">
     <div class="container">
         <div class="row mt-n2">
             <div class="col-12 text-center">
                 <ul class="list-inline mb-5" id="portfolio-flters">
-                    <li class="mx-2 active" data-filter=".first">{% trans "Policy" %}</li>
-                    <li class="mx-2" data-filter=".second">{% trans "Certificate" %}</li>
-                    <li class="mx-2" data-filter=".third">{% trans "Videos" %}</li>
-                    <li class="mx-2" data-filter=".forth">{% trans "Photo Gallery" %}</li>
+                    <li class="mx-2 active"><a href="{% url '_hse' %}">{% trans "Policy" %}</a></li>
+                    <li class="mx-2"><a href="{% url 'hse_pdf' %}">{% trans "Certificate" %}</a></li>
+                    <li class="mx-2"><a href="{% url 'hse_video' %}">{% trans "Videos" %}</a></li>
+                    <li class="mx-2"><a href="{% url 'hse_gallery' %}">{% trans "Photo Gallery" %}</a></li>
                 </ul>
             </div>
         </div>
-        <div class="row g-0 mx-lg-0">
-            <div class="col-lg-12 col-md-6 data first mx-auto">
-                    {% if current_language == 'en' %}
-                    {% for key, value in policy.items %}
-                    <h2 style="color: green;">{{key.title_en}}</h2>
-                    <p>{{key.content_en}}</p>
-                    <ul>
-                        {% for i in value%}
-                        <li>
-                            {{i.content_en}}
-                        </li>
-                        {% endfor %}
-                    </ul>
-                    {% endfor %}
-                    {% else %}
-                    {% for key, value in policy.items %}
-                    <h2 style="color: green;">{{key.title_ar}}</h2>
-                    <p>{{key.content_ar}}</p>
-                    <ul>
-                        {% for i in value%}
-                        <li>
-                            {{i.content_ar}}
-                        </li>
-                        {% endfor %}
-                    </ul>
-                    {% endfor %}
-                    {% endif%}
-            </div>
-
-        </div>
     </div>
 </div>
+{% get_current_language as current_language %}
+<div class="row g-0 mx-lg-0">
+    <div class="col-lg-8 col-md-6 mx-auto">
+        {% if current_language == 'en' %}
+        {% for key, value in policy.items %}
+        <h2 style="color: green;">{{key.title_en}}</h2>
+        <p>{{key.content_en}}</p>
+        <ul>
+            {% for i in value%}
+            <li>
+                {{i.content_en}}
+            </li>
+            {% endfor %}
+        </ul>
+        {% endfor %}
+        {% else %}
+        {% for key, value in policy.items %}
+        <h2 style="color: green;">{{key.title_ar}}</h2>
+        <p>{{key.content_ar}}</p>
+        <ul>
+            {% for i in value%}
+            <li>
+                {{i.content_ar}}
+            </li>
+            {% endfor %}
+        </ul>
+        {% endfor %}
+        {% endif%}
+    </div>
 
+</div>
 {% endblock %}

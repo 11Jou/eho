@@ -12,17 +12,9 @@ import logging
 
 logger = logging.getLogger(__name__)
 
-
+#HSE
 def hse_view(request):
     try:
-        pdfs = QHSEPDF.objects.all()
-        images = QHSEImage.objects.all()
-        paginator_images = Paginator(images, 30)
-        videos = QHSEVideo.objects.all()
-        paginator_videos = Paginator(videos, 30)
-        page_number = request.GET.get('page')
-        page_obj_images = paginator_images.get_page(page_number)
-        page_obj_videos = paginator_videos.get_page(page_number)
         objects = QHSEMainContent.objects.all()
         new_dict = {}
         for object in objects:
@@ -31,20 +23,60 @@ def hse_view(request):
 
         context = {
             "policy":new_dict,
-            "pdfs":pdfs,
-            "page_obj_images":page_obj_images,
-            "page_obj_videos": page_obj_videos
         }
-
-
+        print(context)
         return render(request, "HSE.html", context)
     
+    except Exception as e:
+        logger.exception(e)
+        return HttpResponseServerError
+ 
+ 
+    
+def hse_pdf(request):
+    try:
+        pdfs = QHSEPDF.objects.all()
+        context = {
+            "pdfs":pdfs,
+        }
+        return render(request, "hse_pdf.html", context)  
     except Exception as e:
         logger.exception(e)
         return HttpResponseServerError
 
 
 
+def hse_photo(request):
+    try:
+        page_number = request.GET.get('page')
+        images = QHSEImage.objects.all()
+        paginator_images = Paginator(images, 30)
+        page_obj_images = paginator_images.get_page(page_number)
+        context = {
+            "page_obj_images":page_obj_images,
+        }
+        return render(request, "hse_photo.html", context)  
+    except Exception as e:
+        logger.exception(e)
+        return HttpResponseServerError
+
+
+def hse_video(request):
+    try:
+        page_number = request.GET.get('page')
+        videos = QHSEVideo.objects.all()
+        paginator_videos = Paginator(videos, 30)
+        page_obj_videos = paginator_videos.get_page(page_number)
+        context = {
+            "page_obj_videos": page_obj_videos
+        }
+        return render(request, "hse_video.html", context)  
+        
+    except Exception as e:
+        logger.exception(e)
+        return HttpResponseServerError
+    
+#Exploration 
 def exploration_View(request):
     try:
 
@@ -58,6 +90,8 @@ def exploration_View(request):
         return HttpResponseServerError
 
 
+
+#Operation
 def operation_View(request):
     try:
 
@@ -87,7 +121,7 @@ def operation_petro_view(request):
 
 
 
-
+#ICT
 def ict_view(request):
     try:
         all_blogs = ICT.objects.all()
