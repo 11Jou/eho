@@ -47,9 +47,8 @@ INSTALLED_APPS = [
     'main_pages',
     'media_center',
     'departments',
+    "admin_honeypot"
 ]
-
-
 
 
 MIDDLEWARE = [
