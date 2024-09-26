@@ -24,12 +24,13 @@
     bottom: 20px;
     z-index: 99;
 }
+
 .whatsapp-button {
     position: fixed;
     bottom: 80px;
     right: 45px;
     z-index: 100;
-  }
+}
 
 
 .gallery {
@@ -40,6 +41,7 @@
     max-width: 1200px;
     margin: 20px auto;
 }
+
 @media (max-width: 1024px) {
     .gallery {
         grid-template-columns: repeat(2, 1fr);
@@ -60,6 +62,7 @@
     max-width: 1200px;
     margin: 20px auto;
 }
+
 @media (max-width: 1024px) {
     .gallery-video {
         grid-template-columns: repeat(1, 1fr);
@@ -181,7 +184,7 @@
 }
 
 @media (max-width: 991.98px) {
-    .navbar-light .navbar-nav .nav-link  {
+    .navbar-light .navbar-nav .nav-link {
         margin-right: 0;
         padding: 10px 0;
     }
@@ -228,11 +231,13 @@
 
 /*** Header ***/
 @media (max-width: 768px) {
+
     .header-carousel .owl-carousel-item {
+        overflow: visible;
         position: relative;
         min-height: 500px;
     }
-    
+
     .header-carousel .owl-carousel-item img {
         position: absolute;
         width: 100%;
@@ -364,7 +369,7 @@
 
 
 
-.breadcrumb-item + .breadcrumb-item::before {
+.breadcrumb-item+.breadcrumb-item::before {
     color: var(--light);
 }
 
@@ -409,19 +414,19 @@
         max-width: 100% !important;
     }
 
-    .about-text  {
+    .about-text {
         padding-right: calc(((100% - 960px) / 2) + .75rem);
     }
 }
 
 @media (min-width: 1200px) {
-    .about-text  {
+    .about-text {
         padding-right: calc(((100% - 1140px) / 2) + .75rem);
     }
 }
 
 @media (min-width: 1400px) {
-    .about-text  {
+    .about-text {
         padding-right: calc(((100% - 1320px) / 2) + .75rem);
     }
 }
@@ -440,13 +445,13 @@
     margin-top: 20px;
     text-transform: uppercase;
     font-weight: bold;
-    text-align: center; 
+    text-align: center;
 
 }
 
 
 /*** Service ***/
-.service-item{
+.service-item {
     flex-wrap: wrap;
 
 }
@@ -465,24 +470,24 @@ table {
     border-collapse: collapse;
     width: 100%;
     overflow-x: auto;
-  }
+}
 
-  th{
+th {
     background-color: green;
     color: white;
     text-align: left;
     padding: 8px;
-  }
-  
-  td {
+}
+
+td {
     border: 1px solid #dddddd;
     text-align: left;
     padding: 8px;
-  }
-  
-  tr:nth-child(even) {
+}
+
+tr:nth-child(even) {
     background-color: #dddddd;
-  }
+}
 
 
 
@@ -492,19 +497,19 @@ table {
         max-width: 100% !important;
     }
 
-    .feature-text  {
+    .feature-text {
         padding-left: calc(((100% - 960px) / 2) + .75rem);
     }
 }
 
 @media (min-width: 1200px) {
-    .feature-text  {
+    .feature-text {
         padding-left: calc(((100% - 1140px) / 2) + .75rem);
     }
 }
 
 @media (min-width: 1400px) {
-    .feature-text  {
+    .feature-text {
         padding-left: calc(((100% - 1320px) / 2) + .75rem);
     }
 }
@@ -568,19 +573,19 @@ table {
         max-width: 100% !important;
     }
 
-    .quote-text  {
+    .quote-text {
         padding-right: calc(((100% - 960px) / 2) + .75rem);
     }
 }
 
 @media (min-width: 1200px) {
-    .quote-text  {
+    .quote-text {
         padding-right: calc(((100% - 1140px) / 2) + .75rem);
     }
 }
 
 @media (min-width: 1400px) {
-    .quote-text  {
+    .quote-text {
         padding-right: calc(((100% - 1320px) / 2) + .75rem);
     }
 }
@@ -646,6 +651,7 @@ table {
 }
 
 @media (min-width: 768px) {
+
     .testimonial-carousel::before,
     .testimonial-carousel::after {
         width: 200px;
@@ -653,6 +659,7 @@ table {
 }
 
 @media (min-width: 992px) {
+
     .testimonial-carousel::before,
     .testimonial-carousel::after {
         width: 300px;
@@ -707,19 +714,19 @@ table {
         max-width: 100% !important;
     }
 
-    .contact-text  {
+    .contact-text {
         padding-left: calc(((100% - 960px) / 2) + .75rem);
     }
 }
 
 @media (min-width: 1200px) {
-    .contact-text  {
+    .contact-text {
         padding-left: calc(((100% - 1140px) / 2) + .75rem);
     }
 }
 
 @media (min-width: 1400px) {
-    .contact-text  {
+    .contact-text {
         padding-left: calc(((100% - 1320px) / 2) + .75rem);
     }
 }

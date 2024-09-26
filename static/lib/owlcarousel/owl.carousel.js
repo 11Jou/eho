@@ -202,7 +202,7 @@
 		autoWidth: false,
 
 		startPosition: 0,
-		rtl: false,
+		rtl: true,
 
 		smartSpeed: 250,
 		fluidSpeed: false,

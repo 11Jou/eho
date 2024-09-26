@@ -10,12 +10,6 @@
 <div class="container-fluid page-header-operation py-5 mb-5">
     <div class="container py-5">
         <h1 class="display-3 text-white mb-3 animated slideInDown">{% trans "Operations & Services" %}</h1>
-        <nav aria-label="breadcrumb animated slideInDown">
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a class="text-white" href="#">{% trans "Home"%}</a></li>
-                <li class="breadcrumb-item text-white active" aria-current="page">{% trans "Operations & Services" %}</li>
-            </ol>
-        </nav>
     </div>
 </div>
 <!-- Page Header End -->
@@ -34,9 +28,7 @@
                 {% if current_language == 'ar' %}
                     <div class="col-lg-6 about-text py-5 wow fadeIn" data-wow-delay="0.5s">
                         <div class="p-lg-5 pe-lg-0">
-                            <div class="text-start">
-                                <h1 class="display-5 mb-4">{{exploration.title_ar}}</h1>
-                            </div>
+                            <h1 class="display-5 mb-4">{{exploration.title_ar}}</h1>
                             <p>
                                 {{exploration.content_ar}}
                             </p>
@@ -50,9 +42,7 @@
                 {% else %}
                     <div class="col-lg-6 about-text py-5 wow fadeIn" data-wow-delay="0.5s">
                         <div class="p-lg-5 pe-lg-0">
-                            <div class="text-start">
-                                <h1 class="display-5 mb-4">{{exploration.title_en}}</h1>
-                            </div>
+                            <h1 class="display-5 mb-4">{{exploration.title_en}}</h1>
                             <p>
                                 {{exploration.content_en}}
                             </p>
@@ -73,9 +63,7 @@
                     </div>
                     <div class="col-lg-6 about-text py-5 wow fadeIn" data-wow-delay="0.5s">
                         <div class="p-lg-5 pe-lg-0">
-                            <div class="text-start">
-                                <h1 class="display-5 mb-4">{{exploration.title_ar}}</h1>
-                            </div>
+                            <h1 class="display-5 mb-4">{{exploration.title_ar}}</h1>
                             <p>
                                 {{exploration.content_ar}}
                             </p>
@@ -89,9 +77,7 @@
                 </div>
                     <div class="col-lg-6 about-text py-5 wow fadeIn" data-wow-delay="0.5s">
                         <div class="p-lg-5 pe-lg-0">
-                            <div class="text-start">
-                                <h1 class="display-5 mb-4">{{exploration.title_en}}</h1>
-                            </div>
+                            <h1 class="display-5 mb-4">{{exploration.title_en}}</h1>
                             <p>
                                 {{exploration.content_en}}
                             </p>

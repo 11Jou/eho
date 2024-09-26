@@ -4110,7 +4110,8 @@ fieldset:disabled .btn {
     text-align: inherit;
     white-space: nowrap;
     background-color: transparent;
-    border: 0
+    border: 0;
+    direction: inherit;
 }
 
 .dropdown-item:hover,

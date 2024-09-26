@@ -47,7 +47,7 @@
         </div>
 
         <!-- Language Switcher -->
-        <div class="ms-auto order-lg-last">
+        <div class="order-lg-last">
             <div class="dropdown">
                 <button class="btn btn-sm btn-outline-primary dropdown-toggle" type="button" id="languageDropdown"
                     data-bs-toggle="dropdown" aria-expanded="false">
@@ -57,9 +57,17 @@
                     English
                     {% endif %}
                 </button>
-                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="languageDropdown">
-                    <li><a class="dropdown-item" href="/">English</a></li>
-                    <li><a class="dropdown-item" href="/ar">العربية</a></li>
+                <ul class="dropdown-menu {% if request.LANGUAGE_CODE == 'ar' %}dropdown-menu-start{% else %}dropdown-menu-end{% endif %}" aria-labelledby="languageDropdown">
+                    <li>
+                        <a class="dropdown-item" href="/">
+                            English
+                        </a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="/ar">
+                            العربية
+                        </a>
+                    </li>
                 </ul>
             </div>
         </div>
