@@ -11,8 +11,8 @@
 </div>
 
 
-{% if operations %}
-{% for operation in operations %}
+{% if explorations %}
+{% for exploration in explorations %}
 <div class="container-fluid bg-light overflow-hidden my-5 px-lg-0">
     <div class="container about px-lg-0">
         <div class="row g-0 mx-lg-0">
@@ -21,29 +21,29 @@
                 {% if current_language == 'ar' %}
                     <div class="col-lg-6 about-text py-5 wow fadeIn" data-wow-delay="0.5s">
                         <div class="p-lg-5 pe-lg-0">
-                            <h1 class="display-5 mb-4">{{operation.title_ar}}</h1>
+                            <h1 class="display-5 mb-4">{{exploration.title_ar}}</h1>
                             <p>
-                                {{operation.content_ar}}
+                                {{exploration.content_ar}}
                             </p>
                         </div>
                     </div>
                     <div class="col-lg-6 ps-lg-0" style="min-height: 200px;">
                         <div class="position-relative h-100">
-                            <img class="position-absolute img-fluid w-100 h-100" src="{{operation.image.url}}" style="object-fit: cover;" alt="">
+                            <img class="position-absolute img-fluid w-100 h-100" src="{{exploration.image.url}}" style="object-fit: cover;" alt="">
                         </div>
                     </div>
                 {% else %}
                     <div class="col-lg-6 about-text py-5 wow fadeIn" data-wow-delay="0.5s">
                         <div class="p-lg-5 pe-lg-0">
-                            <h1 class="display-5 mb-4">{{operation.title_en}}</h1>
+                            <h1 class="display-5 mb-4">{{exploration.title_en}}</h1>
                             <p>
-                                {{operation.content_en}}
+                                {{exploration.content_en}}
                             </p>
                         </div>
                     </div>
                     <div class="col-lg-6 ps-lg-0" style="min-height: 200px;">
                         <div class="position-relative h-100">
-                            <img class="position-absolute img-fluid w-100 h-100" src="{{operation.image.url}}" style="object-fit: cover;" alt="">
+                            <img class="position-absolute img-fluid w-100 h-100" src="{{exploration.image.url}}" style="object-fit: cover;" alt="">
                         </div>
                     </div>
                 {% endif %}
@@ -51,28 +51,28 @@
                 {% if current_language == 'ar' %}
                     <div class="col-lg-6 ps-lg-0" style="min-height: 200px;">
                         <div class="position-relative h-100">
-                            <img class="position-absolute img-fluid w-100 h-100" src="{{operation.image.url}}" style="object-fit: cover;" alt="">
+                            <img class="position-absolute img-fluid w-100 h-100" src="{{exploration.image.url}}" style="object-fit: cover;" alt="">
                         </div>
                     </div>
                     <div class="col-lg-6 about-text py-5 wow fadeIn" data-wow-delay="0.5s">
                         <div class="p-lg-5 pe-lg-0">
-                            <h1 class="display-5 mb-4">{{operation.title_ar}}</h1>
+                            <h1 class="display-5 mb-4">{{exploration.title_ar}}</h1>
                             <p>
-                                {{operation.content_ar}}
+                                {{exploration.content_ar}}
                             </p>
                         </div>
                     </div>
                 {% else %}
                 <div class="col-lg-6 ps-lg-0" style="min-height: 200px;">
                     <div class="position-relative h-100">
-                        <img class="position-absolute img-fluid w-100 h-100" src="{{operation.image.url}}" style="object-fit: cover;" alt="">
+                        <img class="position-absolute img-fluid w-100 h-100" src="{{exploration.image.url}}" style="object-fit: cover;" alt="">
                     </div>
                 </div>
                     <div class="col-lg-6 about-text py-5 wow fadeIn" data-wow-delay="0.5s">
                         <div class="p-lg-5 pe-lg-0">
-                            <h1 class="display-5 mb-4">{{operation.title_en}}</h1>
+                            <h1 class="display-5 mb-4">{{exploration.title_en}}</h1>
                             <p>
-                                {{operation.content_en}}
+                                {{exploration.content_en}}
                             </p>
                         </div>
                     </div>

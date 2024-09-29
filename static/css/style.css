@@ -594,6 +594,8 @@ tr:nth-child(even) {
 /*** Team ***/
 .team-item img {
     transition: .5s;
+    width: 100%;
+    height: 400px;
 }
 
 .team-item:hover img {
@@ -603,6 +605,7 @@ tr:nth-child(even) {
 .team-item .team-social {
     position: absolute;
     width: 38px;
+    height: 30px;
     top: 50%;
     left: -38px;
     transform: translateY(-50%);
